@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.*;
 
 public class InternshipUI {
     private static final String WELCOME_MESSAGE = "Welcome to INTERNal Job Search";
@@ -8,7 +9,7 @@ public class InternshipUI {
 
     InternshipUI() {
         scanner = new Scanner(System.in);
-        system = new System()
+        system = new System();
     }
 
     public void run() {
