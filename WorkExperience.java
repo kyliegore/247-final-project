@@ -4,7 +4,7 @@ public class WorkExperience {
     private String company;
     private String location;
     private ArrayList<String> jobSkills;
-    private ArrayList<String> workReferences; //couldnt this be of class reference?
+    private References references; 
 
     public WorkExperience (String company, String location, ArrayList<String> jobSkills, ArrayList<String> workReferences) {
 
