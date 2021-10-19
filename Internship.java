@@ -1,3 +1,3 @@
-public class System {
-    
+public class Internship {
+
 }

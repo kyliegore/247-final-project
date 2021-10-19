@@ -1,15 +1,14 @@
 import java.util.Scanner;
-import java.util.*;
 
 public class InternshipUI {
     private static final String WELCOME_MESSAGE = "Welcome to INTERNal Job Search";
     private String[] mainMenuOptions = {"Login", "Search for Jobs"};
     private Scanner scanner;
-    private System system;
+    private Internship system;
 
     InternshipUI() {
         scanner = new Scanner(System.in);
-        system = new System();
+        system = new Internship();
     }
 
     public void run() {
@@ -21,9 +20,9 @@ public class InternshipUI {
     }
 
     private void displayMainOptions() {
-        System.out.println("Main Menu");
+        Internship.out.println("Main Menu");
         for (int i = 0; i < mainMenuOptions.length; i++) {
-            System.out.println((i+1) + ". " + mainMenuOptions[i]);
+            Internship.out.println((i+1) + ". " + mainMenuOptions[i]);
         }
     }
 
