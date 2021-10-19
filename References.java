@@ -6,4 +6,7 @@ public class References {
     public References(String name, String number, String email) {
 
     }
+    public String toString() {
+        
+    }
 }
