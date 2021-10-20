@@ -1,4 +1,4 @@
-public class Employer extends User implements UofSCVerification {
+public class Employer extends User  {
     private String company;
     private String description;
 
