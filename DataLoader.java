@@ -13,11 +13,10 @@ public class DataLoader extends DataConstants{
 		
 		try {
 			
-		
-			
 			return students;
 			
 		} catch(Exception e) {
+            System.out.println("Student Database not found!");
 			e.printStackTrace();
 		}
 		
@@ -38,4 +37,49 @@ public class DataLoader extends DataConstants{
         return null;
 
     }
+
+    public static ArrayList<Admin> getAdmin() {
+        ArrayList<Admin> admins = new ArrayList<Admin>();
+
+        try {
+
+            return admins;
+
+        } catch (Exception e) {
+            System.out.println("Admin database could not be found!");
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+
+    public static ArrayList<JobListings> getJobListings() {
+        ArrayList<JobListings> jobListings= new ArrayList<JobListings>();
+
+        try {
+            return jobListings;
+
+        } catch (Exception e){
+            System.out.println("Job database could not be found!");
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+
+    public static ArrayList<Resume> getResume() {
+        ArrayList<Resume> resumes = new ArrayList<Resume>();
+
+        try {
+
+            return resumes;
+
+        } catch (Exception e){
+            System.out.println("Resumes could not be found!");
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+
 }
