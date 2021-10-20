@@ -4,11 +4,11 @@ public class InternshipUI {
     private static final String WELCOME_MESSAGE = "Welcome to INTERNal Job Search";
     private String[] mainMenuOptions = {"Login", "Search for Jobs"};
     private Scanner scanner;
-    private System system;
+    private Internship internship;
 
     InternshipUI() {
         scanner = new Scanner(System.in);
-        system = new System();
+        internship = new Internship();
     }
 
     public void run() {
@@ -27,7 +27,7 @@ public class InternshipUI {
     }
 
     private int getUserCommand() {
-
+        return 0;
     }
 
     //need private void methods for each menu option

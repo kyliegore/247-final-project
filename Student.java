@@ -1,4 +1,4 @@
-public class Student extends User implements UofSCVerification {
+public class Student extends User {
     private int gpa;
     private String grade;
     private int uscID;
