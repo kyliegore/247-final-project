@@ -13,7 +13,7 @@ public class DataWriter extends DataConstants {
          * ArrayList<User> users = typeUser.getUser();
          * JSONArray jsonUsers = new JSONArray();
          * for(int i=0; i< users.size(); i++) {
-			jsonFriends.add(getUserJSON(friends.get(i)));
+			jsonFriends.add(getUserJSON(users.get(i)));
 		}
          * 
          * */ 
