@@ -4,7 +4,7 @@ public class JobListings {
     private String location;
     private int pay;
     private boolean remote;
-    private String date; //make this a class
+    private String date;
     private String description;
     private ArrayList<String> desiredSkills;
     private ArrayList<String> alumniEmployees;
