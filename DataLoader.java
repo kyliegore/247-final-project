@@ -1,6 +1,7 @@
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.UUID;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;;
@@ -11,6 +12,25 @@ public class DataLoader extends DataConstants{
 		ArrayList<Student> students = new ArrayList<Student>();
 		
 		try {
+            FileReader reader = new FileReader(STUDENT_FILE_NAME);
+            JSONParser parser = new JSONParser();
+            JSONArray userJSON = (JSONArray)new JSONParser().parse(reader);
+
+            for(int i = 0; i<userJSON.size(); i++) {
+                JSONObject studentJSON = (JSONObject)userJSON.get(i);
+
+                UUID id = UUID.fromString((String)studentJSON.get(USER_ID));
+                String username = (String)studentJSON.get(USER_NAME);
+                String password = (String)studentJSON.get(PASSWORD);
+                String email = (String)studentJSON.get(EMAIL);
+                String firstName = (String)studentJSON.get(FIRST_NAME);
+                String lastName = (String)studentJSON.get(LAST_NAME);
+                Double gpa = (Double)studentJSON.get(GPA);
+                String grade = (String)studentJSON.get(GRADE);
+
+                students.add(new Student(id, username, password, email, firstName, lastName, gpa, grade));
+
+            }
 			
 			return students;
 			
@@ -26,6 +46,23 @@ public class DataLoader extends DataConstants{
         ArrayList<Employer> employers = new ArrayList<Employer>();
 
         try {
+            FileReader reader = new FileReader(EMPLOYER_FILE_NAME);
+            JSONParser parser = new JSONParser();
+            JSONArray userJSON = (JSONArray)new JSONParser().parse(reader);
+
+            for(int i = 0; i < userJSON.size(); i++) {
+                JSONObject employerJSON = (JSONObject)userJSON.get(i);
+
+                UUID id = UUID.fromString((String)employerJSON.get(USER_ID));
+                String email = (String)employerJSON.get(EMAIL);
+                String username = (String)employerJSON.get(USER_NAME);
+                String password = (String)employerJSON.get(PASSWORD);
+                String companyName = (String)employerJSON.get(COMPANY);
+                String description = (String)employerJSON.get(COMPANY_DESCRIPTION);
+
+                employers.add(new Employer(id, email, username, password, companyName, description));
+
+            }
             
             return employers;
 
@@ -41,6 +78,26 @@ public class DataLoader extends DataConstants{
         ArrayList<Admin> admins = new ArrayList<Admin>();
 
         try {
+            FileReader reader = new FileReader(ADMIN_FILE_NAME);
+            JSONParser parser = new JSONParser();
+            JSONArray userJSON = (JSONArray)new JSONParser().parse(reader);
+
+            for (int i = 0; i < userJSON.size(); i++) {
+                JSONObject adminJSON = (JSONObject)userJSON.get(i);
+
+                UUID id = UUID.fromString((String)adminJSON.get(USER_ID));
+                String email = (String)adminJSON.get(EMAIL);
+                String username = (String)adminJSON.get(USER_NAME);
+                String password = (String)adminJSON.get(PASSWORD);
+                String firstName = (String)adminJSON.get(FIRST_NAME);
+                String lastName = (String)adminJSON.get(LAST_NAME);
+
+                admins.add(new Admin(id, email, username, password, firstName, lastName));
+                
+
+
+
+            }
 
             return admins;
 

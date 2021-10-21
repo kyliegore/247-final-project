@@ -1,9 +1,11 @@
+import java.util.UUID;
+
 public class Student extends User {
     private int gpa;
     private String grade;
     private int uscID;
 
-    public Student(int gpa, String grade, int uscID) {
+    public Student(UUID id, String username, String password, String email, String firstName, String lastName, Double gpa, String grade) {
         
     }
     public void searchUser() {
