@@ -18,7 +18,7 @@ public class Employer extends User  {
     public void searchUser() {
         
     }
-    public void isVerified() {
-        
+    public boolean isVerified() {
+        return true;
     }
 }
