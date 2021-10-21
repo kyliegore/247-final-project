@@ -6,14 +6,14 @@
     "first name":"jerry",
     "last name":"seinfeld",
     "gpa":3.6,
-    "grade":"sophmore",
+    "grade":"sophomore",
     "uscid":"S123212312",
     "email":"something@aol.com",
     "skills": "comedy, business, communications",
     "awards": "golden globe, emmy, shorty",
     "extracurriculars": "driving, movies, jogging",
-    "referances": "nbc, laugh factory, kramerica inc",
-    "work experiance": "laugh factory, nbc, abc"
+    "references": "nbc, laugh factory, kramerica inc",
+    "work experience": "laugh factory, nbc, abc"
   },
   {
     "userid":"50c533e5-08e9-46cf-8d44-82173376bd40" ,
@@ -28,7 +28,7 @@
     "skills": "comedy, business, communications",
     "awards": "best seller list ",
     "extracurriculars": "swimming, movies, jogging",
-    "referances": "arte vandalye, kramerica inc",
-    "work experiance": "none"
+    "references": "arte vandalye, kramerica inc",
+    "work experience": "none"
   }
 ]
