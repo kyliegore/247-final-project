@@ -8,7 +8,7 @@ public abstract class DataConstants {
     protected static final String AWARDS = "awards";
     protected static final String EXTRACURRICULARS = "extracurriculars";
     protected static final String REFERENCES = "references";
-    protected static final String EXPERIANCE = "experiance";
+    protected static final String EXPERIENCE = "experience";
 
 
 
