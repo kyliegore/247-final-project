@@ -9,8 +9,8 @@ public class Student extends User {
     public void searchUser() {
 
     }
-    public void isVerified() {
-
+    public boolean isVerified() {
+        return true;
     }
     private void createResume() {
 
