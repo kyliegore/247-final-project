@@ -1,6 +1,8 @@
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -17,8 +19,9 @@ public class DataWriter extends DataConstants {
 		}
          * 
          * */ 
-        ArrayList<Student> newStudents = new ArrayList<Student>();
-        JSONArray jsonStudent = new JSONArray();
+        Students students = Students.getInstance();
+        ArrayList<Student> newStudents = students.getStudent();
+        // JSONArray jsonStudent = new JSONArray();
         for(int i=0; i< newStudents.size(); i++) {
 			jsonStudent.add(getStudentJSON(newStudents.get(i)));
         }
@@ -29,19 +32,23 @@ public class DataWriter extends DataConstants {
             e.printStackTrace();
         }
     }   
-    public static JSONObject getStudentJSON(Student students) {
-        JSONObject studentDetails = new JSONObject();
-            studentDetails.put(USER_ID, Student.getID);
-            studentDetails.put(USER_NAME, Student.getUsername);
-            studentDetails.put(PASSWORD, Student.getPassword);
-            studentDetails.put(GPA, Student.getGPA);
-            studentDetails.put(GRADE, Student.getGrade);
-            studentDetails.put(SKILLS, Student.getSkills);
-            studentDetails.put(AWARDS, Student.getAwards);
-            studentDetails.put(EXTRACURRICULARS, Student.getExtracurriculars);
-            studentDetails.put(REFERENCES, Student.getReferences);
-            studentDetails.put(EXPERIANCE, Student.getExperiance);
-        return studentDetails;
+    public static JSONObject getStudentJSON(Student student) {
+        HashMap<String,Object> studentDetails = new HashMap<String,Object>();
+        // JSONObject studentDetails = new JSONObject();
+            studentDetails.put(USER_ID, student.getId());
+            studentDetails.put(USER_NAME, student.getUsername());
+            studentDetails.put(PASSWORD, student.getPassword());
+            studentDetails.put(GPA, student.getGpa());
+            studentDetails.put(GRADE, student.getGrade());
+            studentDetails.put(EMAIL, student.getEmail());
+            studentDetails.put(FIRST_NAME, student.getFirstName());
+            studentDetails.put(LAST_NAME, student.getLastName());
+            // studentDetails.put(AWARDS, student.getAwards());
+            // studentDetails.put(EXTRACURRICULARS, student.getExtracurriculars());
+            // studentDetails.put(REFERENCES, student.getReferences());
+            // studentDetails.put(EXPERIENCE, student.getExperience());
+            JSONObject studentDetailsJSON = new JSONObject(studentDetails);
+        return studentDetailsJSON;
         
     }
     public static void saveEmployer() {
