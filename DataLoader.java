@@ -93,7 +93,7 @@ public class DataLoader extends DataConstants{
                 String lastName = (String)adminJSON.get(LAST_NAME);
 
                 admins.add(new Admin(id, email, username, password, firstName, lastName));
-                
+
 
 
 
@@ -111,9 +111,26 @@ public class DataLoader extends DataConstants{
 
     public static ArrayList<JobListings> getJobListings() {
         ArrayList<JobListings> jobListings= new ArrayList<JobListings>();
+        
 
         try {
+            FileReader reader = new FileReader(JOB_FILE_NAME);
+            JSONParser parser = new JSONParser();
+            JSONArray jobJSON = (JSONArray)new JSONParser().parse(reader);
+
+            for (int i = 0; i < jobJSON.size(); i++) {
+                JSONObject listingJSON = (JSONObject)jobJSON.get(i);
+                
+                String location = (String)listingJSON.get(LOCATION);
+                Double pay = (Double)listingJSON.get(PAY_RATE);
+                Boolean remote = (Boolean)listingJSON.get(REMOTE_BOOL);
+                String date = (String)listingJSON.get(DATE_FEILD);
+                String description = (String)listingJSON.get(JOB_DESCRIPTION);
+
+                jobListings.add(new JobListings(location, pay, remote, date, description));
+            }
             return jobListings;
+            
 
         } catch (Exception e){
             System.out.println("Job database could not be found!");
@@ -127,6 +144,27 @@ public class DataLoader extends DataConstants{
         ArrayList<Resume> resumes = new ArrayList<Resume>();
 
         try {
+            FileReader reader = new FileReader(STUDENT_FILE_NAME);
+            JSONParser parser = new JSONParser();
+            JSONArray studentresJSON = (JSONArray)new JSONParser().parse(reader);
+
+            for (int i = 0; i<studentresJSON.size(); i++) {
+                JSONObject resumeJSON = (JSONObject)studentresJSON.get(i);
+
+                String firstName = (String)resumeJSON.get(FIRST_NAME);
+                String lastName = (String)resumeJSON.get(LAST_NAME);
+                Double gpa = (Double)resumeJSON.get(GPA);
+                String grade = (String)resumeJSON.get(GRADE);
+                ArrayList<String> skills = (ArrayList<String>)resumeJSON.get(SKILLS);
+                ArrayList<String> awards = (ArrayList<String>)resumeJSON.get(AWARDS);
+                ArrayList<String> extracurriculars = (ArrayList<String>)resumeJSON.get(EXTRACURRICULARS);
+                ArrayList<String> references = (ArrayList<String>)resumeJSON.get(REFERENCES);
+                ArrayList<String> experience = (ArrayList<String>)resumeJSON.get(EXPERIENCE);
+
+                resumes.add(new Resume(firstName, lastName, gpa, grade, skills, awards, extracurriculars, references, experience) );
+
+            }
+
 
             return resumes;
 

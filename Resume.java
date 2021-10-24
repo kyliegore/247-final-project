@@ -9,8 +9,11 @@ public class Resume {
     private References references;
     private WorkExperience workExperience;
 
-    public Resume(String name, String email, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, References references, WorkExperience workExperience) {
+    // public Resume(String name, String email, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, References references, WorkExperience workExperience) {
 
+    // }
+    public Resume(String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills2, ArrayList<String> awards2,
+            ArrayList<String> extracurriculars2, ArrayList<String> references2, ArrayList<String> experience) {
     }
     public void deleteResume() {
         
