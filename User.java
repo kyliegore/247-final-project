@@ -5,7 +5,7 @@ public abstract class User { //at the moment we have no abstract methods
     private String userType;
     private String email;
     private String password;
-    private ArrayList<JobListings> jobListings;
+    private ArrayList<Job> jobListings;
 
     public boolean verifyLogin() {
         return true;
