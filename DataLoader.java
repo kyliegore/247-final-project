@@ -109,8 +109,8 @@ public class DataLoader extends DataConstants{
 
     }
 
-    public static ArrayList<JobListing> getJobListings() {
-        ArrayList<JobListing> jobListings= new ArrayList<JobListing>();
+    public static ArrayList<Job> getJobListings() {
+        ArrayList<Job> jobListings = new ArrayList<Job>();
         
 
         try {
@@ -127,7 +127,7 @@ public class DataLoader extends DataConstants{
                 String date = (String)listingJSON.get(DATE_FEILD);
                 String description = (String)listingJSON.get(JOB_DESCRIPTION);
 
-                jobListings.add(new JobListing(location, pay, remote, date, description));
+                jobListings.add(new Job(location, pay, remote, date, description));
             }
             return jobListings;
             
