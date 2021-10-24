@@ -21,7 +21,7 @@ public class DataWriter extends DataConstants {
          * */ 
         Students students = Students.getInstance();
         ArrayList<Student> newStudents = students.getStudent();
-        // JSONArray jsonStudent = new JSONArray();
+        JSONArray jsonStudent = new JSONArray();
         for(int i=0; i< newStudents.size(); i++) {
 			jsonStudent.add(getStudentJSON(newStudents.get(i)));
         }
@@ -52,7 +52,35 @@ public class DataWriter extends DataConstants {
         
     }
     public static void saveEmployer() {
+        Employers employers = Employers.getInstance();
+        ArrayList<Employer> newEmployers = employers.getStudent();
+        JSONArray jsonStudent = new JSONArray();
+        for(int i=0; i< newEmployers.size(); i++) {
+			jsonStudent.add(getEmployerJSON(newEmployers.get(i)));
+        }
+        try (FileWriter file = new FileWriter(STUDENT_FILE_NAME)) {
+            file.write(jsonStudent.toJSONString());
+            file.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
+    }
+    public static JSONObject getEmployerJSON(Employer employers) {
+        HashMap<String,Object> employerDetails = new HashMap<String,Object>();
+        // JSONObject studentDetails = new JSONObject();
+        employerDetails.put(USER_ID, employers.getId());
+        employerDetails.put(USER_NAME, employers.getUsername());
+        employerDetails.put(PASSWORD, employers.getPassword());
+        employerDetails.put(EMAIL, employers.getEmail());
+        employerDetails.put(COMPANY, employers.getCompany());
+        employerDetails.put(COMPANY_DESCRIPTION, employers.getDescription());
+            // studentDetails.put(AWARDS, student.getAwards());
+            // studentDetails.put(EXTRACURRICULARS, student.getExtracurriculars());
+            // studentDetails.put(REFERENCES, student.getReferences());
+            // studentDetails.put(EXPERIENCE, student.getExperience());
+            JSONObject employerDetailsJSON = new JSONObject(employerDetails);
+        return employerDetailsJSON;
     }
     public static void saveAdmin() {
 
