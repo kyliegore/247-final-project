@@ -12,8 +12,15 @@ public class Resume {
     // public Resume(String name, String email, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, References references, WorkExperience workExperience) {
 
     // }
-    public Resume(String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills2, ArrayList<String> awards2,
-            ArrayList<String> extracurriculars2, ArrayList<String> references2, ArrayList<String> experience) {
+    public Resume(String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards,
+            ArrayList<String> extracurriculars, References references, WorkExperience experience) {
+                this.name = firstName + lastName;
+                this.skills = skills;
+                this.awards = awards;
+                this.extracurriculars = extracurriculars;
+                this.references = references;
+                this.workExperience = experience;
+                
     }
     public void deleteResume() {
         

@@ -29,9 +29,7 @@ public class DataLoader extends DataConstants{
                 String grade = (String)studentJSON.get(GRADE);
 
                 students.add(new Student(id, username, password, email, firstName, lastName, gpa, grade));
-
             }
-			
 			return students;
 			
 		} catch(Exception e) {
@@ -41,6 +39,7 @@ public class DataLoader extends DataConstants{
 		
 		return null;
 	}
+
 
     public static ArrayList<Employer> getEmployers() {
         ArrayList<Employer> employers = new ArrayList<Employer>();
@@ -61,9 +60,7 @@ public class DataLoader extends DataConstants{
                 String description = (String)employerJSON.get(COMPANY_DESCRIPTION);
 
                 employers.add(new Employer(id, email, username, password, companyName, description));
-
             }
-            
             return employers;
 
 		} catch (Exception e){
@@ -73,6 +70,7 @@ public class DataLoader extends DataConstants{
         return null;
 
     }
+
 
     public static ArrayList<Admin> getAdmin() {
         ArrayList<Admin> admins = new ArrayList<Admin>();
@@ -93,14 +91,9 @@ public class DataLoader extends DataConstants{
                 String lastName = (String)adminJSON.get(LAST_NAME);
 
                 admins.add(new Admin(id, email, username, password, firstName, lastName));
-
-
-
-
             }
-
             return admins;
-
+        
         } catch (Exception e) {
             System.out.println("Admin database could not be found!");
             e.printStackTrace();
@@ -108,6 +101,7 @@ public class DataLoader extends DataConstants{
         return null;
 
     }
+
 
     public static ArrayList<Job> getJobListings() {
         ArrayList<Job> jobListings = new ArrayList<Job>();
@@ -130,8 +124,7 @@ public class DataLoader extends DataConstants{
                 jobListings.add(new Job(location, pay, remote, date, description));
             }
             return jobListings;
-            
-
+        
         } catch (Exception e){
             System.out.println("Job database could not be found!");
             e.printStackTrace();
@@ -139,6 +132,7 @@ public class DataLoader extends DataConstants{
         return null;
 
     }
+
 
     public static ArrayList<Resume> getResume() {
         ArrayList<Resume> resumes = new ArrayList<Resume>();
@@ -158,14 +152,11 @@ public class DataLoader extends DataConstants{
                 ArrayList<String> skills = (ArrayList<String>)resumeJSON.get(SKILLS);
                 ArrayList<String> awards = (ArrayList<String>)resumeJSON.get(AWARDS);
                 ArrayList<String> extracurriculars = (ArrayList<String>)resumeJSON.get(EXTRACURRICULARS);
-                ArrayList<String> references = (ArrayList<String>)resumeJSON.get(REFERENCES);
-                ArrayList<String> experience = (ArrayList<String>)resumeJSON.get(EXPERIENCE);
+                References references = (References)resumeJSON.get(REFERENCES);
+                WorkExperience experience = (WorkExperience)resumeJSON.get(EXPERIENCE);
 
                 resumes.add(new Resume(firstName, lastName, gpa, grade, skills, awards, extracurriculars, references, experience) );
-
             }
-
-
             return resumes;
 
         } catch (Exception e){

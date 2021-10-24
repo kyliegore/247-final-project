@@ -9,7 +9,7 @@ public class Job {
     private ArrayList<String> desiredSkills;
     private ArrayList<String> alumniEmployees;
 
-    public Job(String location2, Double pay2, Boolean remote2, String date2, String description2) {
+    public Job(String location, Double pay, Boolean remote, String date, String description) {
     }
     public void showListings() {
         
