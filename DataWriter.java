@@ -53,7 +53,7 @@ public class DataWriter extends DataConstants {
     }
     public static void saveEmployer() {
         Employers employers = Employers.getInstance();
-        ArrayList<Employer> newEmployers = employers.getStudent();
+        ArrayList<Employer> newEmployers = employers.getEmployers();
         JSONArray jsonStudent = new JSONArray();
         for(int i=0; i< newEmployers.size(); i++) {
 			jsonStudent.add(getEmployerJSON(newEmployers.get(i)));
