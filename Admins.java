@@ -18,7 +18,7 @@ public class Admins {
     public ArrayList<Admin> getAdmin() {
         return adminList;
     }
-    public void add(UUID id, String email, String username, String password, String firstName, String lastName) {
+    public void addAdmin(UUID id, String email, String username, String password, String firstName, String lastName) {
         adminList.add(new Admin(id,username,password,email,firstName,lastName));
     }
     public void logout() {
