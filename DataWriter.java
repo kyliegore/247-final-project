@@ -83,6 +83,35 @@ public class DataWriter extends DataConstants {
         return employerDetailsJSON;
     }
     public static void saveAdmin() {
+        Admins admins = Admins.getInstance();
+        ArrayList<Admin> newAdmin = admins.getAdmin();
+        JSONArray jsonAdmin = new JSONArray();
+        for(int i=0; i< newAdmin.size(); i++) {
+			jsonAdmin.add(getAdminJSON(newAdmin.get(i)));
+        }
+        try (FileWriter file = new FileWriter(ADMIN_FILE_NAME)) {
+            file.write(jsonAdmin.toJSONString());
+            file.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public static JSONObject getAdminJSON(Admin admins) {
+        HashMap<String,Object> adminDetails = new HashMap<String,Object>();
+        // JSONObject studentDetails = new JSONObject();
+        adminDetails.put(USER_ID, admins.getId());
+        adminDetails.put(USER_NAME, admins.getUsername());
+        adminDetails.put(PASSWORD, admins.getPassword());
+        adminDetails.put(EMAIL, admins.getEmail());
+        adminDetails.put(FIRST_NAME, admins.getFirstName());
+        adminDetails.put(LAST_NAME, admins.getLastName());
+            // studentDetails.put(AWARDS, student.getAwards());
+            // studentDetails.put(EXTRACURRICULARS, student.getExtracurriculars());
+            // studentDetails.put(REFERENCES, student.getReferences());
+            // studentDetails.put(EXPERIENCE, student.getExperience());
+            JSONObject adminDetailsJSON = new JSONObject(adminDetails);
+        return adminDetailsJSON;
 
     }
     public static void saveResume() {

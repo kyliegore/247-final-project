@@ -13,7 +13,7 @@ public class Employers {
         }
         return employers;
     }
-    public ArrayList<Employer> getStudent() {
+    public ArrayList<Employer> getEmployers() {
         return employerList;
     }
     public void addEmployer(UUID id, String email, String username, String password, String companyName, String description) {
