@@ -1,30 +1,32 @@
 [
   {
-    "userid":934e9322-fe0c-4368-a182-83eb2fa4d8e9
+    "userid":"934e9322-fe0c-4368-a182-83eb2fa4d8e9" ,
     "username":"abcd1234" ,
     "password":"JavA2021" ,
+    "first name":"jerry",
+    "last name":"seinfeld",
     "gpa":3.6,
-    "grade":"sophmore",
-    "uscid":"S123212312",
+    "grade":"sophomore",
     "email":"something@aol.com",
     "skills": "comedy, business, communications",
     "awards": "golden globe, emmy, shorty",
     "extracurriculars": "driving, movies, jogging",
-    "referances": "nbc, laugh factory, kramerica inc",
-    "work experiance": "laugh factory, nbc, abc"
+    "references": "nbc, laugh factory, kramerica inc",
+    "work experience": "laugh factory, nbc, abc"
   },
   {
-    "userid":50c533e5-08e9-46cf-8d44-82173376bd40
+    "userid":"50c533e5-08e9-46cf-8d44-82173376bd40" ,
     "username":"something47" ,
     "password":"H@LLO01" ,
+    "first name":"george",
+    "last name":"costanza",
     "gpa":3.7,
     "grade":"junior",
-    "uscid":"S7328910271",
     "email":"otherthing@aol.com",
     "skills": "comedy, business, communications",
     "awards": "best seller list ",
     "extracurriculars": "swimming, movies, jogging",
-    "referances": "arte vandalye, kramerica inc",
-    "work experiance": "none"
+    "references": "arte vandalye, kramerica inc",
+    "work experience": "none"
   }
 ]

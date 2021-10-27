@@ -7,11 +7,11 @@ public class InternshipUI {
     private String[] employeeMenu = {"Search Jobs", "Create Job Listing", "View Account", "Remove Job", "Edit Job", "Logout"};
     private String[] adminMenu = {"Remove Job Listing", "Remove a Profile", "Logout"};
     private Scanner scanner;
-    private System system;
+    private Internship internship;
 
     InternshipUI() {
         scanner = new Scanner(System.in);
-        Internship = new Internship();
+        internship = new Internship();
     }
 
     public void run() {
@@ -119,6 +119,7 @@ public class InternshipUI {
         }
     }
 
+<<<<<<< HEAD
     private void adminLogin() {
         while(true) {
             displayOptions(adminMenu);
