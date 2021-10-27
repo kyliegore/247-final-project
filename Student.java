@@ -1,10 +1,10 @@
 public class Student extends User implements UofSCVerification {
-    private int gpa;
+    private double gpa;
     private String grade;
-    private int uscID;
 
-    public Student(int gpa, String grade, int uscID) {
-        
+    public Student(double gpa, String grade) {
+        this.gpa = gpa;
+        this.grade = grade;
     }
     public void searchUser() {
 
