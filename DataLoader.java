@@ -26,8 +26,15 @@ public class DataLoader extends DataConstants{
                 String lastName = (String)studentJSON.get(LAST_NAME);
                 Double gpa = (Double)studentJSON.get(GPA);
                 String grade = (String)studentJSON.get(GRADE);
+                ArrayList<String> skills = (ArrayList<String>)studentJSON.get(SKILLS);
+                ArrayList<String> awards = (ArrayList<String>)studentJSON.get(AWARDS);
+                ArrayList<String> extracurriculars = (ArrayList<String>)studentJSON.get(EXTRACURRICULARS);
+                References references = (References)studentJSON.get(REFERENCES);
+                WorkExperience experience = (WorkExperience)studentJSON.get(EXPERIENCE);
+    
 
-                students.add(new Student(id, username, password, email, firstName, lastName, gpa, grade));
+
+                students.add(new Student(id, username, password, email, firstName, lastName, gpa, grade, skills, awards, extracurriculars, references, experience));
 
             }
 			

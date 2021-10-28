@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class Student extends User {
@@ -10,7 +11,7 @@ public class Student extends User {
     private String firstName;
     private String lastName;
 
-    public Student(UUID id, String username, String password, String email, String firstName, String lastName, Double gpa, String grade) {
+    public Student(UUID id, String username, String password, String email, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, References references, WorkExperience experience) {
         this.id = id;
         this.username = username;
         this.password = password;
