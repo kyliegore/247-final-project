@@ -10,6 +10,11 @@ public class Student extends User {
     private String email;
     private String firstName;
     private String lastName;
+    private ArrayList<String> skills;
+    private ArrayList<String> awards;
+    private ArrayList<String> extracurriculars;
+    private References references;
+    private WorkExperience experience;
 
     public Student(UUID id, String username, String password, String email, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, References references, WorkExperience experience) {
         this.id = id;
@@ -20,6 +25,12 @@ public class Student extends User {
         this.email = email;
         this.grade = grade;
         this.gpa = gpa;
+        this.skills = skills;
+        this.awards = awards;
+        this.extracurriculars = extracurriculars;
+        this.references = references;
+        this.experience = experience;
+
     }
 
     public String getLastName() {
@@ -69,6 +80,36 @@ public class Student extends User {
     }
     public void setGpa(double gpa) {
         this.gpa = gpa;
+    }
+    public ArrayList<String> getSkills() {
+        return skills;
+    }
+    public void setSkills(ArrayList<String> skills) {
+        this.skills = skills;
+    }
+    public ArrayList<String> getAwards() {
+        return awards;
+    }
+    public void setAwards(ArrayList<String> awards) {
+        this.awards = awards;
+    }
+    public ArrayList<String> getExtracurriculars() {
+        return extracurriculars;
+    }
+    public void setExtracurriculars(ArrayList<String> extracurriculars) {
+        this.extracurriculars = extracurriculars;
+    }
+    public References getReferences() {
+        return references;
+    }
+    public void setReferences(References references) {
+        this.references = references;
+    }
+    public WorkExperience getExperience() {
+        return experience;
+    }
+    public void setExperience(WorkExperience experience) {
+        this.experience = experience;
     }
     public void searchUser() {
 
