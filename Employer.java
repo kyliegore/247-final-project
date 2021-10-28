@@ -72,4 +72,8 @@ public class Employer extends User  {
     public boolean isVerified() {
         return true;
     }
+
+    public String toString() {
+        return this.company + "\n" + this.Id;
+    }
 }

@@ -17,7 +17,7 @@ public abstract class DataConstants {
     protected static final String FIRST_NAME = "first name";
     protected static final String LAST_NAME = "last name";
    
-    protected static final String EMPLOYER_FILE_NAME = "jsonFiles/Employer";
+    protected static final String EMPLOYER_FILE_NAME = "jsonFiles/Employer.json";
     //atributes of employer json file 
     protected static final String COMPANY = "company";
     protected static final String COMPANY_DESCRIPTION = "description";
