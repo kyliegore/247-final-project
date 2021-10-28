@@ -21,6 +21,7 @@ public class Student extends User {
         this.grade = grade;
         this.gpa = gpa;
     }
+
     public String getLastName() {
         return lastName;
     }
