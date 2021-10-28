@@ -5,7 +5,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-public class DataLoader extends DataConstants{
+public class DataLoader extends DataConstants {
 	
 	public static ArrayList<Student> getStudents() {
 		ArrayList<Student> students = new ArrayList<Student>();
@@ -109,7 +109,7 @@ public class DataLoader extends DataConstants{
     }
 
     public static ArrayList<JobListing> getJobListings() {
-        ArrayList<JobListing> jobListings= new ArrayList<JobListing>();
+        ArrayList<JobListing> jobListings = new ArrayList<JobListing>();
 
         try {
             return jobListings;
