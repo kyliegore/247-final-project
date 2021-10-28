@@ -119,7 +119,6 @@ public class InternshipUI {
         }
     }
 
-<<<<<<< HEAD
     private void adminLogin() {
         while(true) {
             displayOptions(adminMenu);
