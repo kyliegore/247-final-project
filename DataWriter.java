@@ -43,10 +43,11 @@ public class DataWriter extends DataConstants {
             studentDetails.put(EMAIL, student.getEmail());
             studentDetails.put(FIRST_NAME, student.getFirstName());
             studentDetails.put(LAST_NAME, student.getLastName());
-            // studentDetails.put(AWARDS, student.getAwards());
-            // studentDetails.put(EXTRACURRICULARS, student.getExtracurriculars());
-            // studentDetails.put(REFERENCES, student.getReferences());
-            // studentDetails.put(EXPERIENCE, student.getExperience());
+            studentDetails.put(AWARDS, student.getAwards());
+            studentDetails.put(SKILLS, student.getSkills());
+            studentDetails.put(EXTRACURRICULARS, student.getExtracurriculars());
+            studentDetails.put(REFERENCES, student.getReferences());
+            studentDetails.put(EXPERIENCE, student.getExperience());
             JSONObject studentDetailsJSON = new JSONObject(studentDetails);
         return studentDetailsJSON;
         
@@ -75,10 +76,10 @@ public class DataWriter extends DataConstants {
         employerDetails.put(EMAIL, employers.getEmail());
         employerDetails.put(COMPANY, employers.getCompany());
         employerDetails.put(COMPANY_DESCRIPTION, employers.getDescription());
-            // studentDetails.put(AWARDS, student.getAwards());
-            // studentDetails.put(EXTRACURRICULARS, student.getExtracurriculars());
-            // studentDetails.put(REFERENCES, student.getReferences());
-            // studentDetails.put(EXPERIENCE, student.getExperience());
+            //studentDetails.put(AWARDS, student.getAwards());
+            //studentDetails.put(EXTRACURRICULARS, student.getExtracurriculars());
+            //studentDetails.put(REFERENCES, student.getReferences());
+            //studentDetails.put(EXPERIENCE, student.getExperience());
             JSONObject employerDetailsJSON = new JSONObject(employerDetails);
         return employerDetailsJSON;
     }
