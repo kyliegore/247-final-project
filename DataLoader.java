@@ -26,8 +26,15 @@ public class DataLoader extends DataConstants {
                 String lastName = (String)studentJSON.get(LAST_NAME);
                 Double gpa = (Double)studentJSON.get(GPA);
                 String grade = (String)studentJSON.get(GRADE);
+                ArrayList<String> skills = (ArrayList<String>)studentJSON.get(SKILLS);
+                ArrayList<String> awards = (ArrayList<String>)studentJSON.get(AWARDS);
+                ArrayList<String> extracurriculars = (ArrayList<String>)studentJSON.get(EXTRACURRICULARS);
+                References references = (References)studentJSON.get(REFERENCES);
+                WorkExperience experience = (WorkExperience)studentJSON.get(EXPERIENCE);
+    
 
-                students.add(new Student(id, username, password, email, firstName, lastName, gpa, grade));
+
+                students.add(new Student(id, username, password, email, firstName, lastName, gpa, grade, skills, awards, extracurriculars, references, experience));
 
             }
 			
@@ -108,10 +115,25 @@ public class DataLoader extends DataConstants {
 
     }
 
-    public static ArrayList<JobListing> getJobListings() {
-        ArrayList<JobListing> jobListings = new ArrayList<JobListing>();
+    public static ArrayList<Job> getJobListings() {
+        ArrayList<Job> jobListings= new ArrayList<Job>();
 
         try {
+            FileReader reader = new FileReader(JOB_FILE_NAME);
+            JSONParser parser = new JSONParser();
+            JSONArray jobJSON = (JSONArray)new JSONParser().parse(reader);
+
+            for (int i = 0; i < jobJSON.size(); i++) {
+                JSONObject listingJSON = (JSONObject)jobJSON.get(i);
+                
+                String location = (String)listingJSON.get(LOCATION);
+                Double pay = (Double)listingJSON.get(PAY_RATE);
+                Boolean remote = (Boolean)listingJSON.get(REMOTE_BOOL);
+                String date = (String)listingJSON.get(DATE_FEILD);
+                String description = (String)listingJSON.get(JOB_DESCRIPTION);
+
+                jobListings.add(new Job(location, pay, remote, date, description));
+            }
             return jobListings;
 
         } catch (Exception e){
