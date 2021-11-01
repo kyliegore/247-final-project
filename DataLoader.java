@@ -4,6 +4,9 @@ import java.util.UUID;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+/**
+ * @author Anton, Christian, Kylie, Jack
+ */
 
 public class DataLoader extends DataConstants {
 	

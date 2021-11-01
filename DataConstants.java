@@ -1,3 +1,7 @@
+/**
+ * @author Anton, Christian, Kylie, Jack
+ */
+
 public abstract class DataConstants {
 
     protected static final String STUDENT_FILE_NAME = "jsonFiles/Student.json";

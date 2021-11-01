@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+/**
+ * @author Anton, Christian, Kylie, Jack
+ */
 
 public abstract class User { //at the moment we have no abstract methods
     private int userID;

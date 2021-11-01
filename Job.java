@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+/**
+ * @author Anton, Christian, Kylie, Jack
+ */
 
 public class Job {
     private String location;

@@ -1,4 +1,7 @@
 import java.util.UUID;
+/**
+ * @author Anton, Christian, Kylie, Jack
+ */
 
 public class Employer extends User  {
     private String company;

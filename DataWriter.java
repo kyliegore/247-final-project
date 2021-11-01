@@ -5,6 +5,9 @@ import java.util.HashMap;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+/**
+ * @author Anton, Christian, Kylie, Jack
+ */
 
 public class DataWriter extends DataConstants {
     public static void saveStudent() {
