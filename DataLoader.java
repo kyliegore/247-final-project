@@ -49,7 +49,7 @@ public class DataLoader extends DataConstants {
             }
 			
 			return students;
-			
+		
 		} catch(Exception e) {
             System.out.println("Student Database not found!");
 			e.printStackTrace();
@@ -57,7 +57,10 @@ public class DataLoader extends DataConstants {
 		
 		return null;
 	}
-
+    /**
+     * @return the array list of employers being loaded in from JSON file 
+     * this method does the same as above but loading the employers 
+     */
     public static ArrayList<Employer> getEmployers() {
         ArrayList<Employer> employers = new ArrayList<Employer>();
 
@@ -89,6 +92,10 @@ public class DataLoader extends DataConstants {
 
     }
 
+    /**
+     * @return the array list of admins being loaded in from JSON file 
+     * this method does the same as above but loading the admins 
+     */
     public static ArrayList<Admin> getAdmin() {
         ArrayList<Admin> admins = new ArrayList<Admin>();
 
@@ -120,6 +127,10 @@ public class DataLoader extends DataConstants {
 
     }
 
+    /**
+     * @return the array list of job listings being loaded in from JSON file 
+     * this method does the same as above but loading the job listings  
+     */
     public static ArrayList<Job> getJobListings() {
         ArrayList<Job> jobListings= new ArrayList<Job>();
 
