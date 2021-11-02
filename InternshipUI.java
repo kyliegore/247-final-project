@@ -1,4 +1,3 @@
-import java.io.ObjectInputStream.GetField;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -66,8 +65,6 @@ public class InternshipUI {
     }
 
     private void studentLogin() {
-        
-        System.out.println("\nSuccessfully logged in as Student.");
         while(true) {
             displayOptions(studentMenu);
 
@@ -95,8 +92,6 @@ public class InternshipUI {
     }
 
     private void employeeLogin() {
-
-        System.out.println("\nSuccessfully logged in as employer.");
         while(true) {
             displayOptions(employeeMenu);
 
@@ -130,7 +125,6 @@ public class InternshipUI {
     }
 
     private void adminLogin() {
-        System.out.println("\nSuccessfully logged in as Admin.");
         while(true) {
             displayOptions(adminMenu);
 
@@ -152,35 +146,15 @@ public class InternshipUI {
 					break;
             }
         }
-    }
-    private void signup() {
-
         
     }
-    private void login() {
-        String userName = getField("Username");
 
-        if(internship.login(userName)) {
-            Student currentUser = internship.getCurrentUser();
-            System.out.println("Welcome"+ currentUser.getFirstName()+ " "+ currentUser.getLastName());
-
-        } else {
-            System.out.println("Invalid Username!");
-        }
-
-        // System.out.println("Enter Username:\n");
-        // String username = scanner.nextLine();
-
-        // System.out.println("Enter Password: \n");
-        // String password = scanner.nextLine();
-        // if(username = 
-
-
+    private void signup() {
+        
     }
 
-    private String getField(String promt) {
-        System.out.println(promt+": ");
-        return scanner.nextLine();
+    private void login() {
+
     }
 
     private void searchJobs() {
@@ -188,20 +162,79 @@ public class InternshipUI {
     }
 
     private void createResume() {
+        boolean cont = true;
         System.out.println("Please enter the following information. After entering each item hit enter.");
-        System.out.println("First and Last Name: \n");
-        String name = scanner.nextLine();
-        System.out.println("Email: \n");
-        String email = scanner.nextLine();
-        System.out.println("Skills: \n");
+        // System.out.println("First and Last Name: \n");
+        // String name = scanner.nextLine();
+        // System.out.println("Email: \n");
+        // String email = scanner.nextLine();
+        System.out.println("Skills: Enter Q when done\n");
         ArrayList<String> skills = new ArrayList<String>();
-        skills.add(scanner.nextLine());
-        System.out.println("Awards: \n");
-        ArrayList<String> awards = new ArrayList<String>();
-        awards.add(scanner.nextLine());
-        System.out.println("Extracurriculars: \n");
-        System.out.println("References: \n");
+        while(cont) {
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("q")) {
+                cont = false;
+                break;
+            }
+
+            skills.add(input);
+        }
+        System.out.println("Education: Enter Q when done\n");
+        ArrayList<String> education = new ArrayList<String>();
+        cont = true;
+        while(cont) {
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("q")) {
+                cont = false;
+                break;
+            }
+
+            education.add(input);
+        }
+        
+        // System.out.println("Extracurriculars: Enter Q when done\n");
+        // ArrayList<String> extracurriculars = new ArrayList<String>();
+        // cont = true;
+        // while(cont) {
+        //     String input = scanner.nextLine();
+        //     if (input.equalsIgnoreCase("q")) {
+        //         cont = false;
+        //         break;
+        //     }
+
+        //     extracurriculars.add(input);
+        // }
+        // System.out.println("References: Enter Q when done\n");
+        // cont = true;
+        // ArrayList<String> references = new ArrayList<String>();
+        // while(cont) {
+        //     String input = scanner.nextLine();
+        //     if (input.equalsIgnoreCase("q")) {
+        //         cont = false;
+        //         break;
+        //     }
+
+        //     references.add(input);
+        // }
         System.out.println("Any work experience? Enter Y for yes or N for no\n");
+        String checkIfYes = scanner.nextLine();
+        if(checkIfYes.equalsIgnoreCase("y")) { 
+            ArrayList<String> workExperience = new ArrayList<String>();   
+            cont = true;
+            while(cont) {
+                String input = scanner.nextLine();
+                if (input.equalsIgnoreCase("q")) {
+                    cont = false;
+                    break;
+                }
+
+                workExperience.add(input);
+            }
+        }
+        if (!internship.createResume(skills, education, workExperience) {
+            System.out.println("Sorry, we could not create your resume!");
+        }
+        return;
     }
 
     private void createJobListing() {
