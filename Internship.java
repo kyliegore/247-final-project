@@ -3,13 +3,13 @@
  */
 /*
 public class Internship {
-    private UserList users;
-    private User currentUser;
+    private Students students;
+    private Student currentUser;
     private JobListing jobs;
 
     public Internship() {
         jobs = JobListing.getInstance();
-        users = UserList.getInstance();
+        students = Students.getInstance();
     }
 
     public boolean createAccount(String userName, String firstName, String lastName, int age, String phoneNumber) {
@@ -17,13 +17,13 @@ public class Internship {
     }
 
     public boolean login(String userName) {
-        if(!users.haveUser(userName)) return false;
+        if(!students.haveStudent(userName)) return false;
 
-        currentUser = users.getUser(userName);
+        currentUser = students.getStudent(userName);
         return true;
     }
 
-    public User getCurrentUser(){
+    public  Student getCurrentUser(){
         return currentUser;
     }
 

@@ -9,10 +9,15 @@ import org.json.simple.parser.JSONParser;
  */
 
 public class DataLoader extends DataConstants {
-	
+	/**
+     * @return the array list of students being loaded in from JSON file 
+     */
 	public static ArrayList<Student> getStudents() {
 		ArrayList<Student> students = new ArrayList<Student>();
-		
+		/**
+         * This creates instances of file reader JSONparser and JSONArray 
+         * then gets the corresponding values from the JSON file being read in 
+         */
 		try {
             FileReader reader = new FileReader(STUDENT_FILE_NAME);
             JSONParser parser = new JSONParser();
@@ -34,7 +39,11 @@ public class DataLoader extends DataConstants {
                 ArrayList<String> extracurriculars = (ArrayList<String>)studentJSON.get(EXTRACURRICULARS);
                 References references = (References)studentJSON.get(REFERENCES);
                 WorkExperience experience = (WorkExperience)studentJSON.get(EXPERIENCE);
-    
+                
+                /**
+                 * Creates a new instance of the type of the array list and sets the loaded values to the 
+                 * coresponding places in the type
+                 */
                 students.add(new Student(id, username, password, email, firstName, lastName, gpa, grade, skills, awards, extracurriculars, references, experience));
             }
 			

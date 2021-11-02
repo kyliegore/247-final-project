@@ -1,3 +1,4 @@
+import java.io.ObjectInputStream.GetField;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -34,7 +35,7 @@ public class InternshipUI {
 
             switch(userCommand) {
 				case(0):
-					studentLogin();
+					login();
 					break;
 				case(1):
 					employeeLogin();
@@ -65,6 +66,8 @@ public class InternshipUI {
     }
 
     private void studentLogin() {
+        
+        System.out.println("\nSuccessfully logged in as Student.");
         while(true) {
             displayOptions(studentMenu);
 
@@ -92,6 +95,8 @@ public class InternshipUI {
     }
 
     private void employeeLogin() {
+
+        System.out.println("\nSuccessfully logged in as employer.");
         while(true) {
             displayOptions(employeeMenu);
 
@@ -125,6 +130,7 @@ public class InternshipUI {
     }
 
     private void adminLogin() {
+        System.out.println("\nSuccessfully logged in as Admin.");
         while(true) {
             displayOptions(adminMenu);
 
@@ -146,15 +152,35 @@ public class InternshipUI {
 					break;
             }
         }
-        
     }
-
     private void signup() {
+
         
     }
-
     private void login() {
+        String userName = getField("Username");
 
+        if(internship.login(userName)) {
+            Student currentUser = internship.getCurrentUser();
+            System.out.println("Welcome"+ currentUser.getFirstName()+ " "+ currentUser.getLastName());
+
+        } else {
+            System.out.println("Invalid Username!");
+        }
+
+        // System.out.println("Enter Username:\n");
+        // String username = scanner.nextLine();
+
+        // System.out.println("Enter Password: \n");
+        // String password = scanner.nextLine();
+        // if(username = 
+
+
+    }
+
+    private String getField(String promt) {
+        System.out.println(promt+": ");
+        return scanner.nextLine();
     }
 
     private void searchJobs() {
