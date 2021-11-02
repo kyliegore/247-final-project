@@ -3,28 +3,28 @@
  */
 
 public class Internship {
-    private UserList users;
-    private Student currentUser;
+    private Students students;
+    private Student currentStudent;
     private JobListing jobs;
 
     public Internship() {
         jobs = JobListing.getInstance();
-        users = UserList.getInstance();
+        students = Students.getInstance();
     }
 
-    public boolean createAccount(String userName, String firstName, String lastName, int age, String phoneNumber) {
-        return users.addUser(userName, firstName, lastName, age, phoneNumber);
-    }
+    // public boolean createAccount(String userName, String firstName, String lastName, String email) {
+    //     return students.addStudent(null,null,userName, firstName, lastName, email);
+    // }
 
     public boolean login(String userName) {
-        if(!users.haveUser(userName)) return false;
+        if(!students.haveStudent(userName)) return false;
 
-        currentUser = users.getUser(userName);
+        currentStudent = students.getStudent(userName);
         return true;
     }
 
-    public User getCurrentUser(){
-        return currentUser;
+    public Student getCurrentUser(){
+        return currentStudent;
     }
 
     public boolean searchJobs(String needFilter) {

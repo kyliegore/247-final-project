@@ -35,7 +35,7 @@ public class InternshipUI {
 
             switch(userCommand) {
 				case(0):
-					login();
+					loginStudent();
 					break;
 				case(1):
 					employeeLogin();
@@ -157,7 +157,7 @@ public class InternshipUI {
 
         
     }
-    private void login() {
+    private void loginStudent() {
         String userName = getField("Username");
 
         if(internship.login(userName)) {
@@ -167,14 +167,6 @@ public class InternshipUI {
         } else {
             System.out.println("Invalid Username!");
         }
-
-        // System.out.println("Enter Username:\n");
-        // String username = scanner.nextLine();
-
-        // System.out.println("Enter Password: \n");
-        // String password = scanner.nextLine();
-        // if(username = 
-
 
     }
 

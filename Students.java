@@ -28,6 +28,11 @@ public class Students {
         DataWriter.saveStudent();
     }
     public Student getStudent(String userName) {
+        for(Student student : studentList ) {
+            if(student.getUsername().equals(userName)) {
+                return student;
+            }
+        }
         return null;
     }
     
@@ -40,5 +45,11 @@ public class Students {
             return false;
         
     }
+    // public boolean addStudent(String userName, String firstName, String lastName, int age, String phoneNumber) {
+    //     if(haveStudent(userName))return false;
+        
+        
+    //     studentList.add(new Student(userName,firstName,lastName));
+    // }
     
 }
