@@ -38,8 +38,8 @@ public class DataLoader extends DataConstants {
                 ArrayList<String> awards = (ArrayList<String>)studentJSON.get(AWARDS);
                 ArrayList<String> extracurriculars = (ArrayList<String>)studentJSON.get(EXTRACURRICULARS);
                 
-                References references = (References) studentJSON.get(REFERENCES);
-                WorkExperience experience = (WorkExperience)studentJSON.get(EXPERIENCE);
+                ArrayList<String> references = (ArrayList<String>) studentJSON.get(REFERENCES);
+                ArrayList<String> experience = (ArrayList<String>)studentJSON.get(EXPERIENCE);
                 
                 /**
                  * Creates a new instance of the type of the array list and sets the loaded values to the 

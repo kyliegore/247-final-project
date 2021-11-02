@@ -16,10 +16,10 @@ public class Student extends User {
     private ArrayList<String> skills;
     private ArrayList<String> awards;
     private ArrayList<String> extracurriculars;
-    private References references;
-    private WorkExperience experience;
+    private ArrayList<String> references;
+    private ArrayList<String> experience;
 
-    public Student(UUID id, String username, String password, String email, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, References references, WorkExperience experience) {
+    public Student(UUID id, String username, String password, String email, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, ArrayList<String> references, ArrayList<String> experience) {
         this.Id = id;
         this.username = username;
         this.password = password;
@@ -102,16 +102,16 @@ public class Student extends User {
     public void setExtracurriculars(ArrayList<String> extracurriculars) {
         this.extracurriculars = extracurriculars;
     }
-    public References getReferences() {
+    public ArrayList<String> getReferences() {
         return references;
     }
-    public void setReferences(References references) {
+    public void setReferences(ArrayList<String> references) {
         this.references = references;
     }
-    public WorkExperience getExperience() {
+    public ArrayList<String> getExperience() {
         return experience;
     }
-    public void setExperience(WorkExperience experience) {
+    public void setExperience(ArrayList<String> experience) {
         this.experience = experience;
     }
     public String toString() {

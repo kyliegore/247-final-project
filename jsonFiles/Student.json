@@ -11,8 +11,8 @@
     "skills": ["comedy", "business", "communications"],
     "awards": ["golden globe, emmy, shorty"],
     "extracurriculars": ["driving, movies, jogging"],
-    "references": "nbc, laugh factory, kramerica inc",
-    "work experience": "laugh factory, nbc, abc"
+    "references": ["nbc, laugh factory, kramerica inc"],
+    "work experience": ["laugh factory, nbc, abc"]
   },
   {
     "userid":"50c533e5-08e9-46cf-8d44-82173376bd40" ,
@@ -26,7 +26,7 @@
     "skills": ["comedy, business, communications"],
     "awards": ["best seller list"],
     "extracurriculars": ["swimming, movies, jogging"],
-    "references": "arte vandalye, 999-999-9999, vandalye@gmail.com",
-    "work experience": "none"
+    "references": ["arte vandalye, 999-999-9999, vandalye@gmail.com"],
+    "work experience": ["none"]
   }
 ]

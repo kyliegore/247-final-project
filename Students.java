@@ -20,7 +20,7 @@ public class Students {
     public ArrayList<Student> getStudent() {
         return studentList;
     }
-    public void addStudent(UUID id, String username, String password, String email, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, References references, WorkExperience experience) {
+    public void addStudent(UUID id, String username, String password, String email, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, ArrayList<String> references, ArrayList<String> experience) {
         studentList.add(new Student(id,username,password,email,firstName,lastName,gpa,grade,skills,awards,extracurriculars,references,experience));
     }
 
