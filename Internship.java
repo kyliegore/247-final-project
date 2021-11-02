@@ -1,15 +1,15 @@
 /**
  * @author Anton, Christian, Kylie, Jack
  */
-/*
+
 public class Internship {
-    private Students students;
+    private UserList users;
     private Student currentUser;
     private JobListing jobs;
 
     public Internship() {
         jobs = JobListing.getInstance();
-        students = Students.getInstance();
+        users = UserList.getInstance();
     }
 
     public boolean createAccount(String userName, String firstName, String lastName, int age, String phoneNumber) {
@@ -17,13 +17,13 @@ public class Internship {
     }
 
     public boolean login(String userName) {
-        if(!students.haveStudent(userName)) return false;
+        if(!users.haveUser(userName)) return false;
 
-        currentUser = students.getStudent(userName);
+        currentUser = users.getUser(userName);
         return true;
     }
 
-    public  Student getCurrentUser(){
+    public User getCurrentUser(){
         return currentUser;
     }
 
@@ -68,4 +68,3 @@ public class Internship {
         users.saveUsers();
     }
 }
-*/

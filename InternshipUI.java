@@ -162,7 +162,7 @@ public class InternshipUI {
 
         if(internship.login(userName)) {
             Student currentUser = internship.getCurrentUser();
-            System.out.println("Welcome"+ currentUser.getFirstName()+ " "+ currentUser.getLastName());
+            System.out.println("Welcome"+ currentUser.getFirstName()+ " " + currentUser.getLastName());
 
         } else {
             System.out.println("Invalid Username!");
