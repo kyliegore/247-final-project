@@ -7,7 +7,7 @@ import java.util.UUID;
 public class Student extends User {
     private double gpa;
     private String grade;
-    private UUID id;
+    private UUID Id;
     private String username;
     private String password;
     private String email;
@@ -20,7 +20,7 @@ public class Student extends User {
     private WorkExperience experience;
 
     public Student(UUID id, String username, String password, String email, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, References references, WorkExperience experience) {
-        this.id = id;
+        this.Id = id;
         this.username = username;
         this.password = password;
         this.lastName = lastName;
@@ -67,10 +67,10 @@ public class Student extends User {
         this.username = username;
     }
     public UUID getId() {
-        return id;
+        return Id;
     }
     public void setId(UUID id) {
-        this.id = id;
+        this.Id = id;
     }
     public String getGrade() {
         return grade;
@@ -113,6 +113,9 @@ public class Student extends User {
     }
     public void setExperience(WorkExperience experience) {
         this.experience = experience;
+    }
+    public String toString() {
+        return "First name: " + this.firstName + "\n" + "FLast name: " + this.lastName + "\n"+ "ID: " + this.Id + "\n" + "Email: " + this.email + "\n";
     }
     public void searchUser() {
 

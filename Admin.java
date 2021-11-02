@@ -52,6 +52,9 @@ public class Admin extends User {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+    public String toString() {
+        return "First name: " + this.firstName + "\n" + "FLast name: " + this.lastName + "\n"+ "ID: " + this.Id + "\n" + "Email: " + this.email + "\n";
+    }
     public void removeJob() {
 
     }

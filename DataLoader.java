@@ -37,7 +37,8 @@ public class DataLoader extends DataConstants {
                 ArrayList<String> skills = (ArrayList<String>)studentJSON.get(SKILLS);
                 ArrayList<String> awards = (ArrayList<String>)studentJSON.get(AWARDS);
                 ArrayList<String> extracurriculars = (ArrayList<String>)studentJSON.get(EXTRACURRICULARS);
-                References references = (References)studentJSON.get(REFERENCES);
+                
+                References references = (References) studentJSON.get(REFERENCES);
                 WorkExperience experience = (WorkExperience)studentJSON.get(EXPERIENCE);
                 
                 /**
@@ -132,7 +133,7 @@ public class DataLoader extends DataConstants {
                 
                 String location = (String)listingJSON.get(LOCATION);
                 Double pay = (Double)listingJSON.get(PAY_RATE);
-                Boolean remote = (Boolean)listingJSON.get(REMOTE_BOOL);
+                boolean remote = (boolean)listingJSON.get(REMOTE_BOOL);
                 String date = (String)listingJSON.get(DATE_FEILD);
                 String description = (String)listingJSON.get(JOB_DESCRIPTION);
 

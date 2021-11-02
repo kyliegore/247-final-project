@@ -7,7 +7,7 @@
     "last name":"seinfeld",
     "gpa":3.6,
     "grade":"sophomore",
-    "email":"something@aol.com",
+    "email":"jerry@aol.com",
     "skills": ["comedy", "business", "communications"],
     "awards": ["golden globe, emmy, shorty"],
     "extracurriculars": ["driving, movies, jogging"],
@@ -22,11 +22,11 @@
     "last name":"costanza",
     "gpa":3.7,
     "grade":"junior",
-    "email":"otherthing@aol.com",
+    "email":"george@aol.com",
     "skills": ["comedy, business, communications"],
-    "awards": ["best seller list "],
+    "awards": ["best seller list"],
     "extracurriculars": ["swimming, movies, jogging"],
-    "references": "arte vandalye, kramerica inc",
+    "references": "arte vandalye, 999-999-9999, vandalye@gmail.com",
     "work experience": "none"
   }
 ]

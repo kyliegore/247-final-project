@@ -3,10 +3,10 @@ import java.util.ArrayList;
 public class dataloaderTEST {
 
     public static void main(String[] args) {
-        ArrayList<Employer> employers = DataLoader.getEmployers();
+        ArrayList<Admin> admins = DataLoader.getAdmin();
 
-        for(Employer employer : employers) {
-            System.out.println(employer);
+        for(Admin admin : admins) {
+            System.out.println(admin);
         }
 
     }
