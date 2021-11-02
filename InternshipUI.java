@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class InternshipUI {
     private static final String WELCOME_MESSAGE = "Welcome to INTERNal Job Search";
-    private String[] mainMenuOptions = {"Login as Student", "Login as Employer", "Login as Admin"};
+    private String[] mainMenuOptions = {"Login as Student", "Login as Employer", "Login as Admin", "Exit"};
     private String[] studentMenu = {"Search Jobs", "Create Resume", "View Account", "Print Resume", "Logout"};
     private String[] employeeMenu = {"Search Jobs", "Create Job Listing", "View Account", "Remove Job", "Edit Job", "Logout"};
     private String[] adminMenu = {"Remove Job Listing", "Remove a Profile", "Logout"};
@@ -32,6 +32,10 @@ public class InternshipUI {
                 continue;
             }
 
+            if (userCommand == 3) {
+                break;
+            }
+
             switch(userCommand) {
 				case(0):
 					loginStudent();
@@ -45,6 +49,8 @@ public class InternshipUI {
 					break;
             }
         }
+
+        System.out.println("Goodbye!");
     }
 
     private void displayOptions(String[] array) {
@@ -176,7 +182,11 @@ public class InternshipUI {
     }
 
     private void searchJobs() {
-        
+        System.out.println("Would you like to filter your job search? Enter Y for yes and N for no.");
+        String filter = scanner.nextLine();
+        if (filter.equalsIgnoreCase("Y")) {
+
+        } 
     }
 
     private void createResume() {
@@ -249,14 +259,17 @@ public class InternshipUI {
                 workExperience.add(input);
             }
         }
-        if (!internship.createResume(skills, education, workExperience) {
+        if (!internship.resume(skills, education, workExperience) {
             System.out.println("Sorry, we could not create your resume!");
         }
         return;
     }
 
     private void printResume() {
-
+        if (!internship.printResume()) {
+            System.out.println("Sorry! We could not print your resume.");
+        }
+        return;
     }
     private void createJobListing() {
         

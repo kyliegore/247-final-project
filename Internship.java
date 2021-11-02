@@ -29,15 +29,25 @@ public class Internship {
 
     public boolean searchJobs(String needFilter) {
         if (needFilter.equalsIgnoreCase("N")) {
-            return jobs;
+            jobs.search 
+            return true;
+        
         }
         else if (needFilter.equalsIgnoreCase("Y")) {
-            jobs.searchJobs()
+            jobs.searchJobs();
         }
     }
 
-    public boolean createResume() {
+    public boolean resume(ArrayList<String> skills, ArrayList<String> education, ArrayList<String> experience) {
         
+    }
+
+    public boolean printResume() {
+        if(currentStudent.haveResume()) {
+            students.printResume();
+            return true;
+        }
+        return false;
     }
 
     public boolean createJobListing() {
