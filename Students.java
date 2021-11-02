@@ -27,5 +27,17 @@ public class Students {
     public void logout() {
         DataWriter.saveStudent();
     }
+    public Student getStudent(String userName) {
+        return null;
+    }
+    public boolean haveStudent(String userName) {
+         for(Student student: studentList ) {
+                if(student.getUsername().equals(userName)) {
+                    return true;
+                }
+            }
+            return false;
+        
+    }
     
 }
