@@ -4,6 +4,9 @@ import java.util.UUID;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+/**
+ * @author Anton, Christian, Kylie, Jack
+ */
 
 public class DataLoader extends DataConstants {
 	
@@ -32,10 +35,7 @@ public class DataLoader extends DataConstants {
                 References references = (References)studentJSON.get(REFERENCES);
                 WorkExperience experience = (WorkExperience)studentJSON.get(EXPERIENCE);
     
-
-
                 students.add(new Student(id, username, password, email, firstName, lastName, gpa, grade, skills, awards, extracurriculars, references, experience));
-
             }
 			
 			return students;
@@ -67,7 +67,6 @@ public class DataLoader extends DataConstants {
                 String description = (String)employerJSON.get(COMPANY_DESCRIPTION);
 
                 employers.add(new Employer(id, email, username, password, companyName, description));
-
             }
             
             return employers;
@@ -99,10 +98,6 @@ public class DataLoader extends DataConstants {
                 String lastName = (String)adminJSON.get(LAST_NAME);
 
                 admins.add(new Admin(id, email, username, password, firstName, lastName));
-                
-
-
-
             }
 
             return admins;
@@ -144,19 +139,5 @@ public class DataLoader extends DataConstants {
 
     }
 
-    public static ArrayList<Resume> getResume() {
-        ArrayList<Resume> resumes = new ArrayList<Resume>();
-
-        try {
-
-            return resumes;
-
-        } catch (Exception e){
-            System.out.println("Resumes could not be found!");
-            e.printStackTrace();
-        }
-        return null;
-
-    }
 
 }

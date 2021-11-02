@@ -1,3 +1,7 @@
+/**
+ * @author Anton, Christian, Kylie, Jack
+ */
+
 public class Review {
     public User writer;
     public String comment;

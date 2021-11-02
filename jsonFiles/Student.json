@@ -8,9 +8,9 @@
     "gpa":3.6,
     "grade":"sophomore",
     "email":"something@aol.com",
-    "skills": "comedy, business, communications",
-    "awards": "golden globe, emmy, shorty",
-    "extracurriculars": "driving, movies, jogging",
+    "skills": ["comedy", "business", "communications"],
+    "awards": ["golden globe, emmy, shorty"],
+    "extracurriculars": ["driving, movies, jogging"],
     "references": "nbc, laugh factory, kramerica inc",
     "work experience": "laugh factory, nbc, abc"
   },
@@ -23,9 +23,9 @@
     "gpa":3.7,
     "grade":"junior",
     "email":"otherthing@aol.com",
-    "skills": "comedy, business, communications",
-    "awards": "best seller list ",
-    "extracurriculars": "swimming, movies, jogging",
+    "skills": ["comedy, business, communications"],
+    "awards": ["best seller list "],
+    "extracurriculars": ["swimming, movies, jogging"],
     "references": "arte vandalye, kramerica inc",
     "work experience": "none"
   }

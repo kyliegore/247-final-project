@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 import java.util.UUID;
+/**
+ * @author Anton, Christian, Kylie, Jack
+ */
+
 public class Employers {
     private static Employers employers = null;
     private static ArrayList<Employer> employerList = new ArrayList<>();

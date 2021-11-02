@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+/**
+ * @author Anton, Christian, Kylie, Jack
+ */
 
 public class WorkExperience {
     private String company;

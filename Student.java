@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.UUID;
+/**
+ * @author Anton, Christian, Kylie, Jack
+ */
 
 public class Student extends User {
     private double gpa;
@@ -32,6 +35,7 @@ public class Student extends User {
         this.experience = experience;
 
     }
+
     public String getLastName() {
         return lastName;
     }

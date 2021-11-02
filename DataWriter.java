@@ -5,20 +5,12 @@ import java.util.HashMap;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+/**
+ * @author Anton, Christian, Kylie, Jack
+ */
 
 public class DataWriter extends DataConstants {
     public static void saveStudent() {
-        // Student student = Student.searchUser();
-        /** possibility of doing this all in one like having a getInstance in User that I could use here to
-         * create a new ArrayList<User> of the specific User 
-         * User typeUser = User.getInstance();
-         * ArrayList<User> users = typeUser.getUser();
-         * JSONArray jsonUsers = new JSONArray();
-         * for(int i=0; i< users.size(); i++) {
-			jsonFriends.add(getUserJSON(users.get(i)));
-		}
-         * 
-         * */ 
         Students students = Students.getInstance();
         ArrayList<Student> newStudents = students.getStudent();
         JSONArray jsonStudent = new JSONArray();
@@ -34,7 +26,6 @@ public class DataWriter extends DataConstants {
     }   
     public static JSONObject getStudentJSON(Student student) {
         HashMap<String,Object> studentDetails = new HashMap<String,Object>();
-        // JSONObject studentDetails = new JSONObject();
             studentDetails.put(USER_ID, student.getId());
             studentDetails.put(USER_NAME, student.getUsername());
             studentDetails.put(PASSWORD, student.getPassword());
@@ -69,18 +60,13 @@ public class DataWriter extends DataConstants {
     }
     public static JSONObject getEmployerJSON(Employer employers) {
         HashMap<String,Object> employerDetails = new HashMap<String,Object>();
-        // JSONObject studentDetails = new JSONObject();
         employerDetails.put(USER_ID, employers.getId());
         employerDetails.put(USER_NAME, employers.getUsername());
         employerDetails.put(PASSWORD, employers.getPassword());
         employerDetails.put(EMAIL, employers.getEmail());
         employerDetails.put(COMPANY, employers.getCompany());
         employerDetails.put(COMPANY_DESCRIPTION, employers.getDescription());
-            //studentDetails.put(AWARDS, student.getAwards());
-            //studentDetails.put(EXTRACURRICULARS, student.getExtracurriculars());
-            //studentDetails.put(REFERENCES, student.getReferences());
-            //studentDetails.put(EXPERIENCE, student.getExperience());
-            JSONObject employerDetailsJSON = new JSONObject(employerDetails);
+        JSONObject employerDetailsJSON = new JSONObject(employerDetails);
         return employerDetailsJSON;
     }
     public static void saveAdmin() {
@@ -100,20 +86,14 @@ public class DataWriter extends DataConstants {
     }
     public static JSONObject getAdminJSON(Admin admins) {
         HashMap<String,Object> adminDetails = new HashMap<String,Object>();
-        // JSONObject studentDetails = new JSONObject();
         adminDetails.put(USER_ID, admins.getId());
         adminDetails.put(USER_NAME, admins.getUsername());
         adminDetails.put(PASSWORD, admins.getPassword());
         adminDetails.put(EMAIL, admins.getEmail());
         adminDetails.put(FIRST_NAME, admins.getFirstName());
         adminDetails.put(LAST_NAME, admins.getLastName());
-            // studentDetails.put(AWARDS, student.getAwards());
-            // studentDetails.put(EXTRACURRICULARS, student.getExtracurriculars());
-            // studentDetails.put(REFERENCES, student.getReferences());
-            // studentDetails.put(EXPERIENCE, student.getExperience());
-            JSONObject adminDetailsJSON = new JSONObject(adminDetails);
+        JSONObject adminDetailsJSON = new JSONObject(adminDetails);
         return adminDetailsJSON;
-
     }
     public static void saveResume() {
 
