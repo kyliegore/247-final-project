@@ -145,6 +145,7 @@ public class InternshipUI {
 					break;
             }
         }
+
     }
 
     private void signup() {
@@ -152,7 +153,7 @@ public class InternshipUI {
     }
 
     private void login() {
-
+        
     }
 
     private void searchJobs() {
