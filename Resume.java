@@ -31,9 +31,6 @@ public class Resume {
     public void addResume() {
         
     }
-    public void makeCoverLetter() {
-        
-    }
     public String toString() {
         return "";
     }

@@ -30,6 +30,7 @@ public class DataLoader extends DataConstants {
                 String username = (String)studentJSON.get(USER_NAME);
                 String password = (String)studentJSON.get(PASSWORD);
                 String email = (String)studentJSON.get(EMAIL);
+                String number = (String)studentJSON.get(NUMBER);
                 String firstName = (String)studentJSON.get(FIRST_NAME);
                 String lastName = (String)studentJSON.get(LAST_NAME);
                 Double gpa = (Double)studentJSON.get(GPA);
@@ -45,7 +46,7 @@ public class DataLoader extends DataConstants {
                  * Creates a new instance of the type of the array list and sets the loaded values to the 
                  * coresponding places in the type
                  */
-                students.add(new Student(id, username, password, email, firstName, lastName, gpa, grade, skills, awards, extracurriculars, references, experience));
+                students.add(new Student(id, username, password, email, number, firstName, lastName, gpa, grade, skills, awards, extracurriculars, references, experience));
             }
 			
 			return students;
