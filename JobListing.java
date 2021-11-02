@@ -17,8 +17,8 @@ public class JobListing {
     public ArrayList<Job> getJob() {
         return jobList;
     }
-    public void addJob(String location, Double pay, Boolean remote, String date, String description) {
-        jobList.add(new Job(location, pay, remote, date, description));
+    public void addJob(String location, Double pay, Boolean remote, String date, String description, ArrayList<String> skills) {
+        jobList.add(new Job(location, pay, remote, date, description, skills));
     }
     public void logout() {
         DataWriter.saveJobListing();

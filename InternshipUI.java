@@ -178,8 +178,8 @@ public class InternshipUI {
 
     }
 
-    private String getField(String promt) {
-        System.out.println(promt+": ");
+    private String getField(String prompt) {
+        System.out.println(prompt+": ");
         return scanner.nextLine();
     }
 

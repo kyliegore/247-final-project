@@ -41,7 +41,7 @@ public abstract class DataConstants {
     protected static final String REMOTE_BOOL = "remote";
     protected static final String DATE_FEILD = "date";
     protected static final String JOB_DESCRIPTION = "description";
-    
+    protected static final String SKILLS_REQUIRED = "skills";
 
 
 
