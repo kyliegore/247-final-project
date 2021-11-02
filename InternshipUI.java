@@ -36,6 +36,7 @@ public class InternshipUI {
             switch(userCommand) {
 				case(0):
 					loginStudent();
+                    studentLogin();
 					break;
 				case(1):
 					employeeLogin();
@@ -67,7 +68,6 @@ public class InternshipUI {
 
     private void studentLogin() {
         
-        System.out.println("\nSuccessfully logged in as Student.");
         while(true) {
             displayOptions(studentMenu);
 
@@ -165,7 +165,7 @@ public class InternshipUI {
 
         if(internship.login(userName)) {
             Student currentUser = internship.getCurrentUser();
-            System.out.println("Welcome"+ currentUser.getFirstName()+ " " + currentUser.getLastName());
+            System.out.println("Welcome"+ " " + currentUser.getFirstName()+ " " + currentUser.getLastName() + "\n");
 
         } else {
             System.out.println("Invalid Username!");
@@ -174,7 +174,7 @@ public class InternshipUI {
     }
 
     private String getField(String prompt) {
-        System.out.println(prompt+": ");
+        System.out.print(prompt+": ");
         return scanner.nextLine();
     }
 
@@ -200,7 +200,7 @@ public class InternshipUI {
     }
 
     private void printResume() {
-        
+
     }
     private void createJobListing() {
         
