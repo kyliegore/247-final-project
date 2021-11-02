@@ -39,7 +39,11 @@ public class Internship {
     }
 
     public boolean resume(ArrayList<String> skills, ArrayList<String> education, ArrayList<String> experience) {
-        
+        students.createResume(skills, education, experience);
+        if (currentStudent.haveResume()) {
+            return true;
+        }
+        return false;
     }
 
     public boolean printResume() {
