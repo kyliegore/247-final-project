@@ -1,4 +1,5 @@
 import java.io.ObjectInputStream.GetField;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -154,6 +155,7 @@ public class InternshipUI {
     }
     private void signup() {
 
+        
     }
     private void login() {
         String userName = getField("Username");
@@ -186,7 +188,20 @@ public class InternshipUI {
     }
 
     private void createResume() {
-        
+        System.out.println("Please enter the following information. After entering each item hit enter.");
+        System.out.println("First and Last Name: \n");
+        String name = scanner.nextLine();
+        System.out.println("Email: \n");
+        String email = scanner.nextLine();
+        System.out.println("Skills: \n");
+        ArrayList<String> skills = new ArrayList<String>();
+        skills.add(scanner.nextLine());
+        System.out.println("Awards: \n");
+        ArrayList<String> awards = new ArrayList<String>();
+        awards.add(scanner.nextLine());
+        System.out.println("Extracurriculars: \n");
+        System.out.println("References: \n");
+        System.out.println("Any work experience? Enter Y for yes or N for no\n");
     }
 
     private void createJobListing() {
