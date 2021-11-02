@@ -49,6 +49,17 @@ public class Job {
     public void setDescription(String description) {
         this.description = description;
     }
+    public String toString() {
+        String isRemote = "";
+        if(this.remote) {
+            isRemote+="Yes";
+        }
+        else if(!this.remote) {
+            isRemote+="No";
+        }
+        return "Job: " + this.description + "\n" + "Location: " + this.location + "\n" + "Pay: $" + this.pay + "\n"
+        + "Remote: " + isRemote + "\n" + "Date: " + this.date + "\n";
+    }
     public void showListings() {
         
     }
