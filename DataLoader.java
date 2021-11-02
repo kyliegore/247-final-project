@@ -147,8 +147,8 @@ public class DataLoader extends DataConstants {
                 boolean remote = (boolean)listingJSON.get(REMOTE_BOOL);
                 String date = (String)listingJSON.get(DATE_FEILD);
                 String description = (String)listingJSON.get(JOB_DESCRIPTION);
-
-                jobListings.add(new Job(location, pay, remote, date, description));
+                ArrayList<String> skills = (ArrayList<String>)listingJSON.get(SKILLS_REQUIRED);
+                jobListings.add(new Job(location, pay, remote, date, description, skills));
             }
             return jobListings;
 

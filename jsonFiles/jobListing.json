@@ -4,7 +4,8 @@
     "pay":1232.85,
     "remote":false,
     "date":"01/28/2022",
-    "description":"Work for the University in the Health Center"
+    "description":"Work as an intern for Microsoft.",
+    "skills":["JavaScript"]
 
   },
   {
@@ -12,6 +13,7 @@
     "pay":1992.55,
     "remote":true,
     "date":"03/20/2021",
-    "description":"Work for volvo as tech support intern"
+    "description":"Work for volvo as tech support intern.",
+    "skills":["JavaScript"]
   }
 ]

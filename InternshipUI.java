@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class InternshipUI {
     private static final String WELCOME_MESSAGE = "Welcome to INTERNal Job Search";
     private String[] mainMenuOptions = {"Login as Student", "Login as Employer", "Login as Admin"};
-    private String[] studentMenu = {"Search Jobs", "Create Resume", "View Account", "Logout"};
+    private String[] studentMenu = {"Search Jobs", "Create Resume", "View Account", "Print Resume", "Logout"};
     private String[] employeeMenu = {"Search Jobs", "Create Job Listing", "View Account", "Remove Job", "Edit Job", "Logout"};
     private String[] adminMenu = {"Remove Job Listing", "Remove a Profile", "Logout"};
     private Scanner scanner;
@@ -90,6 +90,9 @@ public class InternshipUI {
 				case(2):
 					viewAccount();
 					break;
+                case(3):
+                    printResume();
+                    break;
             }
         }
     }
@@ -170,8 +173,8 @@ public class InternshipUI {
 
     }
 
-    private String getField(String promt) {
-        System.out.println(promt+": ");
+    private String getField(String prompt) {
+        System.out.println(prompt+": ");
         return scanner.nextLine();
     }
 
@@ -196,6 +199,9 @@ public class InternshipUI {
         System.out.println("Any work experience? Enter Y for yes or N for no\n");
     }
 
+    private void printResume() {
+        
+    }
     private void createJobListing() {
         
     }
