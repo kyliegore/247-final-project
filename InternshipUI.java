@@ -35,7 +35,7 @@ public class InternshipUI {
 
             switch(userCommand) {
 				case(0):
-					studentLogin();
+					login();
 					break;
 				case(1):
 					employeeLogin();

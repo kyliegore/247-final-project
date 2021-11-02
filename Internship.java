@@ -23,7 +23,7 @@ public class Internship {
         return true;
     }
 
-    public User getCurrentUser(){
+    public  Student getCurrentUser(){
         return currentUser;
     }
 
