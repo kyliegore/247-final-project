@@ -12,11 +12,41 @@ public class Job {
     private ArrayList<String> desiredSkills;
     private ArrayList<String> alumniEmployees;
 
-    public Job(String location, Double pay, Boolean remote, String date, String description) {
+    public Job(String location, Double pay, boolean remote, String date, String description) {
         this.location = location;
         this.pay = pay;
         this.remote = remote;
         this.date = date;
+        this.description = description;
+    }
+    public String getLocation() {
+        return location;
+    }
+    public void setLocation(String location) {
+        this.location = location;
+    }
+    public Double getPay() {
+        return pay;
+    }
+    public void setPay(Double pay) {
+        this.pay = pay;
+    }
+    public boolean getRemote() {
+        return remote;
+    }
+    public void setRemote(boolean remote) {
+        this.remote = remote;
+    }
+    public String getDate() {
+        return date;
+    }
+    public void setDate(String date) {
+        this.date = date;
+    }
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) {
         this.description = description;
     }
     public void showListings() {
