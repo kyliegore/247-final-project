@@ -244,12 +244,14 @@ public class InternshipUI {
 
         //     references.add(input);
         // }
-        System.out.println("Any work experience? Enter Y for yes or N for no\n");
+        ArrayList<String> workExperience = new ArrayList<String>();
+        System.out.println("Any work experience? Enter Y for yes or N for no");
         String checkIfYes = scanner.nextLine();
-        if(checkIfYes.equalsIgnoreCase("y")) { 
-            ArrayList<String> workExperience = new ArrayList<String>();   
+        if(checkIfYes.equalsIgnoreCase("y")) {    
             cont = true;
+            System.out.println("Enter work experinces. Press q to exit.");
             while(cont) {
+                
                 String input = scanner.nextLine();
                 if (input.equalsIgnoreCase("q")) {
                     cont = false;
@@ -262,6 +264,7 @@ public class InternshipUI {
         if (!internship.resume(skills, education, workExperience) {
             System.out.println("Sorry, we could not create your resume!");
         }
+        */
         return;
     }
 

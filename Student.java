@@ -11,6 +11,7 @@ public class Student extends User {
     private String username;
     private String password;
     private String email;
+    private String number;
     private String firstName;
     private String lastName;
     private ArrayList<String> skills;
@@ -19,13 +20,14 @@ public class Student extends User {
     private ArrayList<String> references;
     private ArrayList<String> experience;
 
-    public Student(UUID id, String username, String password, String email, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, ArrayList<String> references, ArrayList<String> experience) {
+    public Student(UUID id, String username, String password, String email, String number, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, ArrayList<String> references, ArrayList<String> experience) {
         this.Id = id;
         this.username = username;
         this.password = password;
         this.lastName = lastName;
         this.firstName = firstName;
         this.email = email;
+        this.number = number;
         this.grade = grade;
         this.gpa = gpa;
         this.skills = skills;
@@ -53,6 +55,12 @@ public class Student extends User {
     }
     public void setEmail(String email) {
         this.email = email;
+    }
+    public String getNumber() {
+        return number;
+    }
+    public void setNumber(String number) {
+        this.number = number;
     }
     public String getPassword() {
         return password;
@@ -126,10 +134,7 @@ public class Student extends User {
     private void createResume() {
 
     }
-    private void uploadCoverLetter() {
-        
-    }
     private void apply() {
-        
+        System.out.println("Successfully applied to job.");
     }
 }

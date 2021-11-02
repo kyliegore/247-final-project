@@ -13,7 +13,7 @@ public abstract class DataConstants {
     protected static final String EXTRACURRICULARS = "extracurriculars";
     protected static final String REFERENCES = "references";
     protected static final String EXPERIENCE = "work experience";
-
+    protected static final String NUMBER = "number";
 
 
     protected static final String ADMIN_FILE_NAME = "jsonFiles/admin.json";
