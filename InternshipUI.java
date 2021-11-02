@@ -64,7 +64,6 @@ public class InternshipUI {
     }
 
     private void studentLogin() {
-        System.out.println("\nSuccessfully logged in as Student.");
         while(true) {
             displayOptions(studentMenu);
 
@@ -92,7 +91,6 @@ public class InternshipUI {
     }
 
     private void employeeLogin() {
-        System.out.println("\nSuccessfully logged in as employer.");
         while(true) {
             displayOptions(employeeMenu);
 
@@ -126,7 +124,6 @@ public class InternshipUI {
     }
 
     private void adminLogin() {
-        System.out.println("\nSuccessfully logged in as Admin.");
         while(true) {
             displayOptions(adminMenu);
 
@@ -148,6 +145,14 @@ public class InternshipUI {
 					break;
             }
         }
+    }
+
+    private void signup() {
+        
+    }
+
+    private void login() {
+
     }
 
     private void searchJobs() {
