@@ -95,12 +95,31 @@ public class DataWriter extends DataConstants {
         JSONObject adminDetailsJSON = new JSONObject(adminDetails);
         return adminDetailsJSON;
     }
-    public static void saveResume() {
-
-    }
     public static void saveJobListing() {
-
+        JobListing joblistings = JobListing.getInstance();
+        ArrayList<Job> newJob = joblistings.getJob();
+        JSONArray jsonJob = new JSONArray();
+        for(int i=0; i< newJob.size(); i++) {
+			jsonJob.add(getJobListingJSON(newJob.get(i)));
+        }
+        try (FileWriter file = new FileWriter(JOB_FILE_NAME)) {
+            file.write(jsonJob.toJSONString());
+            file.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+    public static JSONObject getJobListingJSON(Job jobs) {
+        HashMap<String,Object> jobDetails = new HashMap<String,Object>();
+        jobDetails.put(LOCATION, jobs.getLocation());
+        jobDetails.put(PAY_RATE, jobs.getPay());
+        jobDetails.put(REMOTE_BOOL, jobs.getRemote());
+        jobDetails.put(DATE_FEILD, jobs.getDate());
+        jobDetails.put(JOB_DESCRIPTION, jobs.getDescription());
+        JSONObject jobDetailsJSON = new JSONObject(jobDetails);
+        return jobDetailsJSON;
+    }
+    
 
     
 }

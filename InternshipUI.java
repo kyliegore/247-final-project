@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class InternshipUI {
     private static final String WELCOME_MESSAGE = "Welcome to INTERNal Job Search";
     private String[] mainMenuOptions = {"Login as Student", "Login as Employer", "Login as Admin"};
-    private String[] studentMenu = {"Search Jobs", "Create Resume", "View Account", "Logout"};
+    private String[] studentMenu = {"Search Jobs", "Create Resume", "View Account", "Print Resume", "Logout"};
     private String[] employeeMenu = {"Search Jobs", "Create Job Listing", "View Account", "Remove Job", "Edit Job", "Logout"};
     private String[] adminMenu = {"Remove Job Listing", "Remove a Profile", "Logout"};
     private Scanner scanner;
@@ -34,7 +34,8 @@ public class InternshipUI {
 
             switch(userCommand) {
 				case(0):
-					studentLogin();
+					loginStudent();
+                    studentLogin();
 					break;
 				case(1):
 					employeeLogin();
@@ -65,6 +66,7 @@ public class InternshipUI {
     }
 
     private void studentLogin() {
+        
         while(true) {
             displayOptions(studentMenu);
 
@@ -87,6 +89,9 @@ public class InternshipUI {
 				case(2):
 					viewAccount();
 					break;
+                case(3):
+                    printResume();
+                    break;
             }
         }
     }
@@ -152,9 +157,22 @@ public class InternshipUI {
     private void signup() {
         
     }
+    private void loginStudent() {
+        String userName = getField("Username");
 
-    private void login() {
+        if(internship.login(userName)) {
+            Student currentUser = internship.getCurrentUser();
+            System.out.println("Welcome"+ " " + currentUser.getFirstName()+ " " + currentUser.getLastName() + "\n");
 
+        } else {
+            System.out.println("Invalid Username!");
+        }
+
+    }
+
+    private String getField(String prompt) {
+        System.out.print(prompt+": ");
+        return scanner.nextLine();
     }
 
     private void searchJobs() {
@@ -237,6 +255,9 @@ public class InternshipUI {
         return;
     }
 
+    private void printResume() {
+
+    }
     private void createJobListing() {
         
     }

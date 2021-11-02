@@ -77,6 +77,7 @@ public class Employer extends User  {
     }
 
     public String toString() {
-        return this.company + "\n" + this.Id;
+        return "Company name: " + this.company + "\n" + "Company ID: " + this.Id + "\n" + "Email: " + this.email + "\n" 
+        + "Description: " + this.description + "\n";
     }
 }

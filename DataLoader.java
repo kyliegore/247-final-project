@@ -37,8 +37,9 @@ public class DataLoader extends DataConstants {
                 ArrayList<String> skills = (ArrayList<String>)studentJSON.get(SKILLS);
                 ArrayList<String> awards = (ArrayList<String>)studentJSON.get(AWARDS);
                 ArrayList<String> extracurriculars = (ArrayList<String>)studentJSON.get(EXTRACURRICULARS);
-                References references = (References)studentJSON.get(REFERENCES);
-                WorkExperience experience = (WorkExperience)studentJSON.get(EXPERIENCE);
+                
+                ArrayList<String> references = (ArrayList<String>) studentJSON.get(REFERENCES);
+                ArrayList<String> experience = (ArrayList<String>)studentJSON.get(EXPERIENCE);
                 
                 /**
                  * Creates a new instance of the type of the array list and sets the loaded values to the 
@@ -48,7 +49,7 @@ public class DataLoader extends DataConstants {
             }
 			
 			return students;
-			
+		
 		} catch(Exception e) {
             System.out.println("Student Database not found!");
 			e.printStackTrace();
@@ -56,7 +57,10 @@ public class DataLoader extends DataConstants {
 		
 		return null;
 	}
-
+    /**
+     * @return the array list of employers being loaded in from JSON file 
+     * this method does the same as above but loading the employers 
+     */
     public static ArrayList<Employer> getEmployers() {
         ArrayList<Employer> employers = new ArrayList<Employer>();
 
@@ -88,6 +92,10 @@ public class DataLoader extends DataConstants {
 
     }
 
+    /**
+     * @return the array list of admins being loaded in from JSON file 
+     * this method does the same as above but loading the admins 
+     */
     public static ArrayList<Admin> getAdmin() {
         ArrayList<Admin> admins = new ArrayList<Admin>();
 
@@ -119,6 +127,10 @@ public class DataLoader extends DataConstants {
 
     }
 
+    /**
+     * @return the array list of job listings being loaded in from JSON file 
+     * this method does the same as above but loading the job listings  
+     */
     public static ArrayList<Job> getJobListings() {
         ArrayList<Job> jobListings= new ArrayList<Job>();
 
@@ -132,11 +144,11 @@ public class DataLoader extends DataConstants {
                 
                 String location = (String)listingJSON.get(LOCATION);
                 Double pay = (Double)listingJSON.get(PAY_RATE);
-                Boolean remote = (Boolean)listingJSON.get(REMOTE_BOOL);
+                boolean remote = (boolean)listingJSON.get(REMOTE_BOOL);
                 String date = (String)listingJSON.get(DATE_FEILD);
                 String description = (String)listingJSON.get(JOB_DESCRIPTION);
-
-                jobListings.add(new Job(location, pay, remote, date, description));
+                ArrayList<String> skills = (ArrayList<String>)listingJSON.get(SKILLS_REQUIRED);
+                jobListings.add(new Job(location, pay, remote, date, description, skills));
             }
             return jobListings;
 

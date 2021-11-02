@@ -20,7 +20,7 @@ public class Students {
     public ArrayList<Student> getStudent() {
         return studentList;
     }
-    public void addStudent(UUID id, String username, String password, String email, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, References references, WorkExperience experience) {
+    public void addStudent(UUID id, String username, String password, String email, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, ArrayList<String> references, ArrayList<String> experience) {
         studentList.add(new Student(id,username,password,email,firstName,lastName,gpa,grade,skills,awards,extracurriculars,references,experience));
     }
 
@@ -28,8 +28,14 @@ public class Students {
         DataWriter.saveStudent();
     }
     public Student getStudent(String userName) {
+        for(Student student : studentList ) {
+            if(student.getUsername().equals(userName)) {
+                return student;
+            }
+        }
         return null;
     }
+    
     public boolean haveStudent(String userName) {
          for(Student student: studentList ) {
                 if(student.getUsername().equals(userName)) {
@@ -39,5 +45,11 @@ public class Students {
             return false;
         
     }
+    // public boolean addStudent(String userName, String firstName, String lastName, int age, String phoneNumber) {
+    //     if(haveStudent(userName))return false;
+        
+        
+    //     studentList.add(new Student(userName,firstName,lastName));
+    // }
     
 }

@@ -6,13 +6,14 @@ import java.util.ArrayList;
 public class WorkExperience {
     private String company;
     private String location;
-    private ArrayList<String> jobSkills;
-    private References references; 
+    private ArrayList<String> jobSkills; 
 
-    public WorkExperience (String company, String location, ArrayList<String> jobSkills, ArrayList<String> workReferences) {
-
+    public WorkExperience (String company, String location, ArrayList<String> jobSkills) {
+        this.company = company;
+        this.location = location;
+        this.jobSkills = jobSkills;
     }
     public String toString() {
-        return "";
+        return "Company: " + company + "\n" + "Location: " + location + "\n" + "Job Skills: " + jobSkills.get(0) + "\n";
     }
 }

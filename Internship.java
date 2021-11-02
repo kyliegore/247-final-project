@@ -4,7 +4,7 @@
 
 public class Internship {
     private Students students;
-    private Student currentUser;
+    private Student currentStudent;
     private JobListing jobs;
 
     public Internship() {
@@ -12,19 +12,19 @@ public class Internship {
         students = Students.getInstance();
     }
 
-    public boolean createAccount(String userName, String firstName, String lastName, int age, String phoneNumber) {
-        return users.addUser(userName, firstName, lastName, age, phoneNumber);
-    }
+    // public boolean createAccount(String userName, String firstName, String lastName, String email) {
+    //     return students.addStudent(null,null,userName, firstName, lastName, email);
+    // }
 
     public boolean login(String userName) {
         if(!students.haveStudent(userName)) return false;
 
-        currentUser = students.getStudent(userName);
+        currentStudent = students.getStudent(userName);
         return true;
     }
 
-    public User getCurrentUser(){
-        return currentUser;
+    public Student getCurrentUser(){
+        return currentStudent;
     }
 
     public boolean searchJobs(String needFilter) {
