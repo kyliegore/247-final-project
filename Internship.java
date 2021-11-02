@@ -1,7 +1,7 @@
 /**
  * @author Anton, Christian, Kylie, Jack
  */
-/*
+
 public class Internship {
     private UserList users;
     private Student currentUser;
@@ -68,4 +68,3 @@ public class Internship {
         users.saveUsers();
     }
 }
-*/

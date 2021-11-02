@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @author Anton, Christian, Kylie, Jack
  */
-/*
+
 public class InternshipUI {
     private static final String WELCOME_MESSAGE = "Welcome to INTERNal Job Search";
     private String[] mainMenuOptions = {"Login as Student", "Login as Employer", "Login as Admin"};
@@ -236,4 +236,3 @@ public class InternshipUI {
 
 
 }
-*/
