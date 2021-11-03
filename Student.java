@@ -19,6 +19,7 @@ public class Student   {
     private ArrayList<String> extracurriculars;
     private ArrayList<String> references;
     private ArrayList<String> experience;
+    private ArrayList<Resume> resumes;
 
     public Student(UUID id, String username, String password, String email, String number, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, ArrayList<String> references, ArrayList<String> experience) {
         this.Id = id;
@@ -35,6 +36,7 @@ public class Student   {
         this.extracurriculars = extracurriculars;
         this.references = references;
         this.experience = experience;
+        this.resumes = new ArrayList<Resume>();
 
     }
 
@@ -133,9 +135,17 @@ public class Student   {
     }
     public void createResume(ArrayList<String> skills, ArrayList<String> education, ArrayList<String> experience) {
         Resume currentResume = new Resume(firstName, lastName, email, number, skills, education, experience);
+        resumes.add(currentResume);
+    }
+    public void printResume(ArrayList<String> skills, ArrayList<String> education, ArrayList<String> experience) {
+        for(Resume resume : resumes) {
+            resume.printResume();
+        }
     }
     public boolean haveResume() {
-        
+        if (resumes == null) {
+            return false;
+        }
         return true;
     }
     private void apply() {

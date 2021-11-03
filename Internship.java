@@ -53,8 +53,7 @@ public class Internship {
     }
 
     public boolean resume(ArrayList<String> skills, ArrayList<String> education, ArrayList<String> experience) {
-        Resume newResume = new Resume(currentStudent.getFirstName(), currentStudent.getLastName(), currentStudent.getEmail(), currentStudent.getNumber(), skills, education, experience);
-        newResume.printResume();
+        currentStudent.createResume(skills, education, experience);
         if (currentStudent.haveResume()) {
             return true;
         }
@@ -63,7 +62,7 @@ public class Internship {
 
     public boolean printResume() {
         if(currentStudent.haveResume()) {
-            students.printResume();
+            currentStudent.printResume();
             return true;
         }
         return false;
