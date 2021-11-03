@@ -48,7 +48,7 @@ public class Internship {
     }
 
     public boolean showJobs() {
-        jobs.printJobs();
+        jobs.showListings();
         return true;
     }
 
@@ -83,6 +83,16 @@ public class Internship {
 
     public boolean viewAccount() {
 
+    }
+
+    public boolean viewApplicants() {
+        if (jobs.getApplicants() == -1) {
+            return false;
+        }
+        else {
+            jobs.getApplicants();
+            return true;
+        }
     }
     
     public boolean removeJobListing() {

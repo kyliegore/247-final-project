@@ -23,4 +23,15 @@ public class JobListing {
     public void logout() {
         DataWriter.saveJobListing();
     }
+    public void getApplicants() {
+        
+    }
+    public void showListings() {
+        ArrayList<Job> jobs = DataLoader.getJobListings();
+
+        for(Job job : jobs) {
+            
+            System.out.println(job);
+        }
+    }
 }
