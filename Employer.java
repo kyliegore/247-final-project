@@ -7,6 +7,7 @@ public class Employer {
     /**
      * Creating private instance variables for an Employer
      */
+public class Employer   {
     private String company;
     private String description;
     private UUID Id;

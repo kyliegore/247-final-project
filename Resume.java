@@ -4,16 +4,31 @@ import java.util.ArrayList;
  */
 
 public class Resume {
+<<<<<<< HEAD
     private String name;
     private String firstname;
+=======
+    private String firstName;
+>>>>>>> 46b8f53797d8b41a1f97724536f1af98ed983b97
     private String lastName;
     private String email;
     private String number;
     private ArrayList<String> skills;
+<<<<<<< HEAD
     private ArrayList<String> education;
     private ArrayList<String> experience;
 
     public Resume(String firstName, String lastName, String email, String number, ArrayList<String> skills,ArrayList<String> education, ArrayList<String> experience) {
+=======
+    private ArrayList<String> education ;
+    private ArrayList<String> experience;
+
+    // public Resume(String name, String email, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, References references, WorkExperience workExperience) {
+
+    // }
+    public Resume(String firstName, String lastName, String email, String number, ArrayList<String> skills,
+            ArrayList<String> education, ArrayList<String> experience) {
+>>>>>>> 46b8f53797d8b41a1f97724536f1af98ed983b97
                 this.name = firstName + lastName;
                 this.email = email;
                 this.number = number;
@@ -22,13 +37,18 @@ public class Resume {
                 this.experience = experience;
                 
     }
-    public void deleteResume() {
-        
-    }
     public void addResume() {
         
     }
-    public String toString() {
-        return "";
+    public String printResume() {
+        String result = "";
+        result += this.firstName;
+        result += " " + this.lastName + "\n";
+        result += this.email + "\n";
+        result += this.number + "\n";
+        result += this.skills + "\n";
+        result += this.education + "\n";
+        result += this.experience;
+        return result;
     }
 }

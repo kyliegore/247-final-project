@@ -62,7 +62,7 @@ public class Internship {
 
     public boolean printResume() {
         if(currentStudent.haveResume()) {
-            students.printResume();
+            currentStudent.printResume();
             return true;
         }
         return false;
