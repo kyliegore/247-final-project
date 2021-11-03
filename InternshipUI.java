@@ -192,7 +192,7 @@ public class InternshipUI {
     }
 
     private void loginAdmin() {
-        
+
     }
 
     private String getField(String prompt) {
@@ -215,6 +215,13 @@ public class InternshipUI {
                 System.out.println("The list of jobs could not be shown.");
             }
         }
+        System.out.println("Would you like to apply to any of these jobs? (Y/N)\n");
+        String input = Scanner.nextLine();
+        if (input.equalsIgnoreCase("Y")) {
+
+        }
+
+        return;
     }
 
     private void createResume() {

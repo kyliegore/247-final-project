@@ -6,23 +6,22 @@ import java.util.ArrayList;
 public class Resume {
     private String name;
     private String email;
+    private String number;
     private ArrayList<String> skills;
-    private ArrayList<String> awards ;
-    private ArrayList<String> extracurriculars;
-    private References references;
-    private WorkExperience workExperience;
+    private ArrayList<String> education ;
+    private ArrayList<String> experience;
 
     // public Resume(String name, String email, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, References references, WorkExperience workExperience) {
 
     // }
-    public Resume(String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards,
-            ArrayList<String> extracurriculars, References references, WorkExperience experience) {
+    public Resume(String firstName, String lastName, String email, String number, ArrayList<String> skills,
+            ArrayList<String> education, ArrayList<String> experience) {
                 this.name = firstName + lastName;
+                this.email = email;
+                this.number = number;
                 this.skills = skills;
-                this.awards = awards;
-                this.extracurriculars = extracurriculars;
-                this.references = references;
-                this.workExperience = experience;
+                this.education = education;
+                this.experience = experience;
                 
     }
     public void deleteResume() {

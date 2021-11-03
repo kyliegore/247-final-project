@@ -131,8 +131,8 @@ public class Student extends User {
     public boolean isVerified() {
         return true;
     }
-    private void createResume() {
-
+    public void createResume(ArrayList<String> skills, ArrayList<String> education, ArrayList<String> experience) {
+        Resume currentResume = new Resume(firstName, lastName, email, number, skills, education, experience);
     }
     public boolean haveResume() {
         
