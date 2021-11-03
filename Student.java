@@ -22,6 +22,7 @@ public class Student {
     private ArrayList<String> extracurriculars;
     private ArrayList<String> references;
     private ArrayList<String> experience;
+    private ArrayList<Resume> resumes;
     /**
      * Parameterized Constructor
      * @param id
@@ -175,3 +176,4 @@ public class Student {
     public void apply() {
         System.out.println("Successfully applied to job.");
     }
+}
