@@ -172,11 +172,6 @@ public class Student {
         }
         return true;
     }
-<<<<<<< HEAD
     public void apply() {
-=======
-    private void apply() {
-
->>>>>>> 9ead5ddd8a39fc432f32c91f7dbfa8d330cf7abb
         System.out.println("Successfully applied to job.");
     }
