@@ -4,7 +4,7 @@ import java.util.UUID;
  * @author Anton, Christian, Kylie, Jack
  */
 
-public class Student extends User {
+public class Student   {
     private double gpa;
     private String grade;
     private UUID Id;
