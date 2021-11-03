@@ -134,6 +134,10 @@ public class Student extends User {
     private void createResume() {
 
     }
+    public boolean haveResume() {
+        
+        return true;
+    }
     private void apply() {
         System.out.println("Successfully applied to job.");
     }
