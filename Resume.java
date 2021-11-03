@@ -4,6 +4,7 @@ import java.util.ArrayList;
  */
 
 public class Resume {
+    private String name;
     private String firstName;
     private String lastName;
     private String email;
