@@ -208,7 +208,7 @@ public class InternshipUI {
         } 
         else {
             if (!internship.showJobs()) {
-                System.out.println("The list of jobs could not be shown.")
+                System.out.println("The list of jobs could not be shown.");
             }
         }
     }
