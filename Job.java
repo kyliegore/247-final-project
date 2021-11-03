@@ -66,14 +66,6 @@ public class Job {
         return "Job: " + this.description + "\n" + "Location: " + this.location + "\n" + "Pay: $" + this.pay + "\n"
         + "Remote: " + isRemote + "\n" + "Date: " + this.date + "\n" + "Required skills: " + skills.get(0) + "\n";
     }
-    public void showListings() {
-        ArrayList<Job> jobs = DataLoader.getJobListings();
-
-        for(Job job : jobs) {
-            
-            System.out.println(job);
-        }
-    }
     private void filterListings() {
         
     }

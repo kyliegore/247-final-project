@@ -191,6 +191,10 @@ public class InternshipUI {
         }
     }
 
+    private void loginAdmin() {
+        
+    }
+
     private String getField(String prompt) {
         System.out.print(prompt+": ");
         return scanner.nextLine();
