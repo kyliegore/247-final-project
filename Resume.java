@@ -4,11 +4,22 @@ import java.util.ArrayList;
  */
 
 public class Resume {
+<<<<<<< HEAD
+    private String name;
+    private String firstname;
+=======
     private String firstName;
+>>>>>>> 46b8f53797d8b41a1f97724536f1af98ed983b97
     private String lastName;
     private String email;
     private String number;
     private ArrayList<String> skills;
+<<<<<<< HEAD
+    private ArrayList<String> education;
+    private ArrayList<String> experience;
+
+    public Resume(String firstName, String lastName, String email, String number, ArrayList<String> skills,ArrayList<String> education, ArrayList<String> experience) {
+=======
     private ArrayList<String> education ;
     private ArrayList<String> experience;
 
@@ -17,6 +28,7 @@ public class Resume {
     // }
     public Resume(String firstName, String lastName, String email, String number, ArrayList<String> skills,
             ArrayList<String> education, ArrayList<String> experience) {
+>>>>>>> 46b8f53797d8b41a1f97724536f1af98ed983b97
                 this.name = firstName + lastName;
                 this.email = email;
                 this.number = number;

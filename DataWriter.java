@@ -8,7 +8,9 @@ import org.json.simple.JSONObject;
 /**
  * @author Anton, Christian, Kylie, Jack
  */
-
+/**
+ * DataWrite to Class to add Student and Employer Details to a Json File
+ */
 public class DataWriter extends DataConstants {
     public static void saveStudent() {
         Students students = Students.getInstance();
@@ -17,6 +19,9 @@ public class DataWriter extends DataConstants {
         for(int i=0; i< newStudents.size(); i++) {
 			jsonStudent.add(getStudentJSON(newStudents.get(i)));
         }
+        /**
+         * Checking if a student exists w/ a certain file name 
+         */
         try (FileWriter file = new FileWriter(STUDENT_FILE_NAME)) {
             file.write(jsonStudent.toJSONString());
             file.flush();
@@ -25,6 +30,10 @@ public class DataWriter extends DataConstants {
         }
     }   
     public static JSONObject getStudentJSON(Student student) {
+        /**
+         * Used a Hashmap Here and then added that into a JSONOBJECT because we had errors saying that
+         * "put" had to be of the type HASHMAP<String,Object>.
+         */
         HashMap<String,Object> studentDetails = new HashMap<String,Object>();
             studentDetails.put(USER_ID, student.getId());
             studentDetails.put(USER_NAME, student.getUsername());
@@ -43,6 +52,9 @@ public class DataWriter extends DataConstants {
         return studentDetailsJSON;
         
     }
+    /**
+     * nearly identical to saveStudent except only writes Employer Information 
+     */
     public static void saveEmployer() {
         Employers employers = Employers.getInstance();
         ArrayList<Employer> newEmployers = employers.getEmployers();
@@ -50,6 +62,9 @@ public class DataWriter extends DataConstants {
         for(int i=0; i< newEmployers.size(); i++) {
 			jsonStudent.add(getEmployerJSON(newEmployers.get(i)));
         }
+        /**
+         * Checking if a employer exists w/ a certain file name 
+         */
         try (FileWriter file = new FileWriter(STUDENT_FILE_NAME)) {
             file.write(jsonStudent.toJSONString());
             file.flush();
@@ -59,6 +74,10 @@ public class DataWriter extends DataConstants {
 
     }
     public static JSONObject getEmployerJSON(Employer employers) {
+        /**
+         * Used a Hashmap Here and then added that into a JSONOBJECT because we had errors saying that
+         * "put" had to be of the type HASHMAP<String,Object>.
+         */
         HashMap<String,Object> employerDetails = new HashMap<String,Object>();
         employerDetails.put(USER_ID, employers.getId());
         employerDetails.put(USER_NAME, employers.getUsername());
@@ -76,6 +95,9 @@ public class DataWriter extends DataConstants {
         for(int i=0; i< newAdmin.size(); i++) {
 			jsonAdmin.add(getAdminJSON(newAdmin.get(i)));
         }
+        /**
+         * Checking if a employer exists w/ a certain file name 
+         */
         try (FileWriter file = new FileWriter(ADMIN_FILE_NAME)) {
             file.write(jsonAdmin.toJSONString());
             file.flush();
@@ -85,6 +107,10 @@ public class DataWriter extends DataConstants {
 
     }
     public static JSONObject getAdminJSON(Admin admins) {
+        /**
+         * Used a Hashmap Here and then added that into a JSONOBJECT because we had errors saying that
+         * "put" had to be of the type HASHMAP<String,Object>.
+         */
         HashMap<String,Object> adminDetails = new HashMap<String,Object>();
         adminDetails.put(USER_ID, admins.getId());
         adminDetails.put(USER_NAME, admins.getUsername());
@@ -102,6 +128,9 @@ public class DataWriter extends DataConstants {
         for(int i=0; i< newJob.size(); i++) {
 			jsonJob.add(getJobListingJSON(newJob.get(i)));
         }
+        /**
+         * Checking if a employer exists w/ a certain file name 
+         */
         try (FileWriter file = new FileWriter(JOB_FILE_NAME)) {
             file.write(jsonJob.toJSONString());
             file.flush();
@@ -110,6 +139,10 @@ public class DataWriter extends DataConstants {
         }
     }
     public static JSONObject getJobListingJSON(Job jobs) {
+        /**
+         * Used a Hashmap Here and then added that into a JSONOBJECT because we had errors saying that
+         * "put" had to be of the type HASHMAP<String,Object>.
+         */
         HashMap<String,Object> jobDetails = new HashMap<String,Object>();
         jobDetails.put(LOCATION, jobs.getLocation());
         jobDetails.put(PAY_RATE, jobs.getPay());

@@ -4,7 +4,10 @@ import java.util.UUID;
  * @author Anton, Christian, Kylie, Jack
  */
 
-public class Student   {
+public class Student {
+    /**
+     * Creating private instance variables for a Student
+     */
     private double gpa;
     private String grade;
     private UUID Id;
@@ -19,8 +22,23 @@ public class Student   {
     private ArrayList<String> extracurriculars;
     private ArrayList<String> references;
     private ArrayList<String> experience;
-    private ArrayList<Resume> resumes;
-
+    /**
+     * Parameterized Constructor
+     * @param id
+     * @param username
+     * @param password
+     * @param email
+     * @param number
+     * @param firstName
+     * @param lastName
+     * @param gpa
+     * @param grade
+     * @param skills
+     * @param awards
+     * @param extracurriculars
+     * @param references
+     * @param experience
+     */
     public Student(UUID id, String username, String password, String email, String number, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, ArrayList<String> references, ArrayList<String> experience) {
         this.Id = id;
         this.username = username;
@@ -39,7 +57,10 @@ public class Student   {
         this.resumes = new ArrayList<Resume>();
 
     }
-
+    /**
+     * Getters and Setters for Instance Variables of a Student
+     * @return
+     */
     public String getLastName() {
         return lastName;
     }
@@ -124,6 +145,9 @@ public class Student   {
     public void setExperience(ArrayList<String> experience) {
         this.experience = experience;
     }
+    /**
+     * ToString to show the Student their acct information.
+     */
     public String toString() {
         return "First name: " + this.firstName + "\n" + "FLast name: " + this.lastName + "\n"+ "ID: " + this.Id + "\n" + "Email: " + this.email + "\n";
     }
@@ -148,7 +172,11 @@ public class Student   {
         }
         return true;
     }
+<<<<<<< HEAD
     public void apply() {
+=======
+    private void apply() {
+
+>>>>>>> 9ead5ddd8a39fc432f32c91f7dbfa8d330cf7abb
         System.out.println("Successfully applied to job.");
     }
-}
