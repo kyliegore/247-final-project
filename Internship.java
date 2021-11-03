@@ -42,15 +42,14 @@ public class Internship {
         return currentEmployer;
     }
 
-    public boolean searchJobs(String needFilter) {
-        if (needFilter.equalsIgnoreCase("N")) {
-            jobs.search 
-            return true;
-        
-        }
-        else if (needFilter.equalsIgnoreCase("Y")) {
-            jobs.searchJobs();
-        }
+    public boolean searchJobs(String filter) {
+        jobs.searchJobs(filter);
+        return true;
+    }
+
+    public boolean showJobs() {
+        jobs.printJobs();
+        return true;
     }
 
     public boolean resume(ArrayList<String> skills, ArrayList<String> education, ArrayList<String> experience) {
