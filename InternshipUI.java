@@ -191,6 +191,10 @@ public class InternshipUI {
         }
     }
 
+    private void loginAdmin() {
+        
+    }
+
     private String getField(String prompt) {
         System.out.print(prompt+": ");
         return scanner.nextLine();
@@ -294,6 +298,8 @@ public class InternshipUI {
     private void printResume() {
         if (!internship.printResume()) {
             System.out.println("Sorry! We could not print your resume.");
+        } else {
+            System.out.println(internship.printResume());
         }
         return;
     }
