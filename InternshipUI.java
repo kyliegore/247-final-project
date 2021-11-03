@@ -9,7 +9,7 @@ public class InternshipUI {
     private static final String WELCOME_MESSAGE = "Welcome to INTERNal Job Search";
     private String[] mainMenuOptions = {"Login as Student", "Login as Employer", "Login as Admin", "Exit"};
     private String[] studentMenu = {"Search Jobs", "Create Resume", "View Account", "Print Resume", "Logout"};
-    private String[] employeeMenu = {"Search Jobs", "Create Job Listing", "View Account", "Remove Job", "Edit Job", "Logout"};
+    private String[] employeeMenu = {"Search Jobs", "Create Job Listing", "View Account", "Remove Job", "Edit Job", "View Applicants", "Logout"};
     private String[] adminMenu = {"Remove Job Listing", "Remove a Profile", "Logout"};
     private Scanner scanner;
     private Internship internship;
@@ -131,6 +131,9 @@ public class InternshipUI {
                 case(4):
                     editJob();
                     break;
+                case(5):
+                    viewApplicants();
+                    break;
             }
         }
     }
@@ -163,6 +166,7 @@ public class InternshipUI {
     private void signup() {
         
     }
+    
     private void loginStudent() {
         String userName = getField("Username");
 
@@ -182,11 +186,20 @@ public class InternshipUI {
     }
 
     private void searchJobs() {
-        System.out.println("Would you like to filter your job search? Enter Y for yes and N for no.");
-        String filter = scanner.nextLine();
-        if (filter.equalsIgnoreCase("Y")) {
-
+        System.out.println("Would you like to filter your job search? Enter Y for yes and N for no.\n");
+        String doFilter = scanner.nextLine();
+        if (doFilter.equalsIgnoreCase("Y")) {
+            System.out.println("Enter the filter you would like: \n");
+            String filterName = scanner.nextLine();
+            if (!internship.searchJobs(filter)) {
+                System.out.println("The filter search did not work.");
+            }
         } 
+        else {
+            if (!internship.showJobs()) {
+                System.out.println("The list of jobs could not be shown.")
+            }
+        }
     }
 
     private void createResume() {
@@ -264,7 +277,6 @@ public class InternshipUI {
         if (!internship.resume(skills, education, workExperience) {
             System.out.println("Sorry, we could not create your resume!");
         }
-        */
         return;
     }
 
@@ -275,11 +287,29 @@ public class InternshipUI {
         return;
     }
     private void createJobListing() {
-        
+        System.out.println("Enter the following details: ");
+        System.out.println("Location: \n");
+        String location = scanner.nextLine();
+        System.out.println("Pay Rate: \n");
+        double pay = scanner.nextDouble();
+        System.out.println("Is this job remote? Enter T for yes or F for no\n");
+        boolean remote = scanner.nextBoolean();
+        System.out.println("Start Date (mm/dd/year): \n");
+        String startDate = scanner.nextLine();
+        System.out.println("Write Description");
+        String description = scanner.nextLine();
+
+        if(!internship.createJobListing(location, pay, remote, startDate, description)) {
+            System.out.println("Sorry we could not add the job!");
+        }
+        return;
     }
 
     private void removeJob() {
-        
+        if(!internship.removeJob()) {
+            System.out.println("Sorry the job could not be removed.");
+        }
+        return;
     }
 
     private void editJob() {
@@ -287,16 +317,26 @@ public class InternshipUI {
     }
 
     private void viewAccount() {
+        if(!internship.viewAccount()) {
+            System.out.println("Sorry you cannot view your account.");
+        }
+        return;
+    }
 
+    private void viewApplicants() {
+        if(!internship.viewAccount()) {
+            System.out.println("Sorry you cannot view your applicants.");
+        }
+        return;
     }
     
-    private void removeJobListing() {
+    // private void removeJobListing() {
 
-    }
+    // }
     
-    private void removeProfile() {
+    // private void removeProfile() {
 
-    }
+    // }
     //need private void methods for each menu option
 
     public static void main(String[] args) {
