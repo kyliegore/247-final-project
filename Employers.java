@@ -26,5 +26,21 @@ public class Employers {
     public void logout() {
         DataWriter.saveEmployer();
     }
+    public boolean haveEmployer(String userName) {
+        for(Employer employer: employerList ) {
+            if(employer.getUsername().equals(userName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public Employer getEmployer(String userName) {
+        for(Employer employer : employerList ) {
+            if(employer.getUsername().equals(userName)) {
+                return employer;
+            }
+        }
+        return null;
+    }
     
 }
