@@ -4,7 +4,8 @@ import java.util.ArrayList;
  */
 
 public class Resume {
-    private String name;
+    private String firstName;
+    private String lastName;
     private String email;
     private String number;
     private ArrayList<String> skills;
@@ -24,13 +25,18 @@ public class Resume {
                 this.experience = experience;
                 
     }
-    public void deleteResume() {
-        
-    }
     public void addResume() {
         
     }
-    public String toString() {
-        return "";
+    public String printResume() {
+        String result = "";
+        result += this.firstName;
+        result += " " + this.lastName + "\n";
+        result += this.email + "\n";
+        result += this.number + "\n";
+        result += this.skills + "\n";
+        result += this.education + "\n";
+        result += this.experience;
+        return result;
     }
 }

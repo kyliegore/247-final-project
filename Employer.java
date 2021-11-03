@@ -3,7 +3,7 @@ import java.util.UUID;
  * @author Anton, Christian, Kylie, Jack
  */
 
-public class Employer extends User  {
+public class Employer   {
     private String company;
     private String description;
     private UUID Id;
