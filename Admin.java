@@ -1,6 +1,6 @@
 import java.util.UUID;
 
-public class Admin extends User {
+public class Admin  {
     private String firstName;
     private String lastName;
     private UUID Id;
