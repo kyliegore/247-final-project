@@ -3,14 +3,19 @@ import java.util.UUID;
  * @author Anton, Christian, Kylie, Jack
  */
 
-public class Employer extends User  {
+public class Employer {
+    /**
+     * Creating private instance variables for an Employer
+     */
     private String company;
     private String description;
     private UUID Id;
     private String password;
     private String username;
     private String email;
-
+    /**
+     * paramterized Constructor for an Employer
+     */
     public Employer(UUID id, String email, String username, String password, String company, String description) {
         this.company = company;
         this.Id = id;
@@ -19,7 +24,10 @@ public class Employer extends User  {
         this.password = password;
         this.description = description;
         }
-   
+   /**
+    * Getters and Setters for Employer Information
+    * @return
+    */
     public String getEmail() {
         return email;
     }
@@ -75,7 +83,9 @@ public class Employer extends User  {
     public boolean isVerified() {
         return true;
     }
-
+    /**
+     * theoretically prints out employer information
+     */
     public String toString() {
         return "Company name: " + this.company + "\n" + "Company ID: " + this.Id + "\n" + "Email: " + this.email + "\n" 
         + "Description: " + this.description + "\n";

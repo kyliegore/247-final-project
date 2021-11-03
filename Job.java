@@ -4,13 +4,16 @@ import java.util.ArrayList;
  */
 
 public class Job {
+    /**
+     * Initializing instance variables
+     */
     private String location;
     private Double pay;
     private boolean remote;
     private String date;
     private String description;
     private ArrayList<String> skills;
-
+    
     public Job(String location, Double pay, boolean remote, String date, String description, ArrayList<String> skills) {
         this.location = location;
         this.pay = pay;
@@ -19,6 +22,10 @@ public class Job {
         this.description = description;
         this.skills = skills;
     }
+    /**
+     * Getters and setters to retrieve data relevant to jobListings
+     * @return
+     */
     public String getLocation() {
         return location;
     }
@@ -55,6 +62,9 @@ public class Job {
     public void setSkills(ArrayList<String> skills) {
         this.skills = skills;
     }
+    /**
+     * Printing out the Jobs and information that comes with them
+     */
     public String toString() {
         String isRemote = "";
         if(this.remote) {
