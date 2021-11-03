@@ -1,7 +1,7 @@
 /**
  * @author Anton, Christian, Kylie, Jack
  */
-
+import java.util.ArrayList;
 public class Internship {
     private Students students;
     private Student currentStudent;
@@ -39,7 +39,7 @@ public class Internship {
     }
 
     public boolean resume(ArrayList<String> skills, ArrayList<String> education, ArrayList<String> experience) {
-        students.createResume(skills, education, experience);
+        currentStudent.createResume(skills, education, experience);
         if (currentStudent.haveResume()) {
             return true;
         }
