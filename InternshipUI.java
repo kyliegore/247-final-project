@@ -285,7 +285,7 @@ public class InternshipUI {
                 workExperience.add(input);
             }
         }
-        if (!internship.resume(skills, education, workExperience) ){
+        if (!internship.resume(skills, education, workExperience)) {
             System.out.println("Sorry, we could not create your resume!");
         }
         return;
