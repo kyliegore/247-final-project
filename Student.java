@@ -137,9 +137,9 @@ public class Student   {
         Resume currentResume = new Resume(firstName, lastName, email, number, skills, education, experience);
         resumes.add(currentResume);
     }
-    public void printResume(ArrayList<String> skills, ArrayList<String> education, ArrayList<String> experience) {
+    public void printResume() {
         for(Resume resume : resumes) {
-            resume.printResume();
+            System.out.println(resume.printResume());
         }
     }
     public boolean haveResume() {
@@ -148,7 +148,7 @@ public class Student   {
         }
         return true;
     }
-    private void apply() {
+    public void apply() {
         System.out.println("Successfully applied to job.");
     }
 }
