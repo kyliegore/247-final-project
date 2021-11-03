@@ -42,6 +42,7 @@ public class InternshipUI {
                     studentLogin();
 					break;
 				case(1):
+                    loginEmployer();
 					employeeLogin();
 					break;
 				case(2):
@@ -166,14 +167,24 @@ public class InternshipUI {
     private void loginStudent() {
         String userName = getField("Username");
 
-        if(internship.login(userName)) {
-            Student currentUser = internship.getCurrentUser();
+        if(internship.loginStudent(userName)) {
+            Student currentUser = internship.getCurrentStudent();
             System.out.println("Welcome"+ " " + currentUser.getFirstName()+ " " + currentUser.getLastName() + "\n");
 
         } else {
             System.out.println("Invalid Username!");
         }
 
+    }
+
+    private void loginEmployer() {
+        String userName = getField("Username");
+
+        if(internship.loginEmployer(userName)) {
+            Employer currentUser = internship.getCurrentEmployer();
+            System.out.println("Welcome"+ " " + currentUser.getCompany()+ "\n");
+            
+        }
     }
 
     private String getField(String prompt) {

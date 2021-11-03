@@ -5,26 +5,41 @@
 public class Internship {
     private Students students;
     private Student currentStudent;
+    private Employers employers;
+    private Employer currentEmployer;
     private JobListing jobs;
 
     public Internship() {
         jobs = JobListing.getInstance();
         students = Students.getInstance();
+        employers = Employers.getInstance();
     }
 
     // public boolean createAccount(String userName, String firstName, String lastName, String email) {
     //     return students.addStudent(null,null,userName, firstName, lastName, email);
     // }
 
-    public boolean login(String userName) {
+    public boolean loginStudent(String userName) {
         if(!students.haveStudent(userName)) return false;
 
         currentStudent = students.getStudent(userName);
         return true;
     }
 
-    public Student getCurrentUser(){
+    public boolean loginEmployer(String userName) {
+        if(!employers.haveEmployer(userName)) return false;
+
+        currentEmployer = employers.getEmployer(userName);
+        return true;
+    }
+
+
+    public Student getCurrentStudent(){
         return currentStudent;
+    }
+
+    public Employer getCurrentEmployer(){
+        return currentEmployer;
     }
 
     public boolean searchJobs(String needFilter) {
