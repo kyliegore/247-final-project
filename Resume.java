@@ -4,12 +4,6 @@ import java.util.ArrayList;
  */
 
 public class Resume {
-    private String name;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String number;
-    private ArrayList<String> skills;
     private ArrayList<String> education ;
     private ArrayList<String> experience;
 
