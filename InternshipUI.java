@@ -292,6 +292,7 @@ public class InternshipUI {
         if (!internship.resume(skills, education, workExperience)) {
             System.out.println("Sorry, we could not create your resume!");
         }
+        internship.resume(skills, education, workExperience);
         return;
     }
 
