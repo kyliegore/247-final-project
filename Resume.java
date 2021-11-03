@@ -4,34 +4,37 @@ import java.util.ArrayList;
  */
 
 public class Resume {
-    private String name;
+    private String firstName;
+    private String lastName;
     private String email;
+    private String number;
     private ArrayList<String> skills;
-    private ArrayList<String> awards ;
-    private ArrayList<String> extracurriculars;
-    private References references;
-    private WorkExperience workExperience;
+    private ArrayList<String> education;
+    private ArrayList<String> experience;
 
-    // public Resume(String name, String email, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, References references, WorkExperience workExperience) {
-
-    // }
-    public Resume(String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards,
-            ArrayList<String> extracurriculars, References references, WorkExperience experience) {
-                this.name = firstName + lastName;
+    public Resume(String firstName, String lastName, String email, String number, ArrayList<String> skills, 
+            ArrayList<String> education, ArrayList<String> experience) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.email = email;
+                this.number = number;
                 this.skills = skills;
-                this.awards = awards;
-                this.extracurriculars = extracurriculars;
-                this.references = references;
-                this.workExperience = experience;
+                this.education = education;
+                this.experience = experience;
                 
-    }
-    public void deleteResume() {
-        
     }
     public void addResume() {
         
     }
-    public String toString() {
-        return "";
+    public String printResume() {
+        String result = "";
+        result += this.firstName;
+        result += " " + this.lastName + "\n";
+        result += this.email + "\n";
+        result += this.number + "\n";
+        result += this.skills + "\n";
+        result += this.education + "\n";
+        result += this.experience;
+        return result;
     }
 }
