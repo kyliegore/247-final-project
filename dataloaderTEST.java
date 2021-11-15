@@ -1,6 +1,7 @@
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,14 +14,14 @@ class DataLoaderTest {
 	@BeforeEach
 	public void setup() {
 		studentList.clear();
-		studentList.add(new User("asmith", "Amy", "Smith", 19, "803-454-3344"));
-		studentList.add(new User("bwhite", "Bob", "White", 23, "803-333-3544"));
+		studentList.add(new Student(UUID.fromString("934e9322-fe0c-4368-a182-83eb2fa4d8e9"), "somethingFunny", "abcd789", "aperson@aol.com", "864-555-5555", "jeff", "bezos", 2.8, "sophmore", null, null, null, null, null));
+		studentList.add(new Student(UUID.fromString("934e9322-fe0c-4368-a182-83eb2gs4d8e9"), "something", "abcd782", "johnsmith@aol.com", "828-555-5555", "james", "smith", 3.4, "freshman", null, null, null, null, null));
 		DataWriter.saveStudent();
 	}
 	
 	@AfterEach
 	public void tearDown() {
-		Students.getInstance().getCurrentStudent().clear();
+		Students.getInstance().getStudent().clear();
 		DataWriter.saveStudent();
 	}
 	
@@ -33,7 +34,7 @@ class DataLoaderTest {
 
 	@Test
 	void testGetStudentsSizeZero() {
-		Students.getInstance().getCurrentStudent().clear();
+		Students.getInstance().getStudent().clear();
 		DataWriter.saveStudent();
 		assertEquals(0, studentList.size());
 	}
@@ -41,6 +42,6 @@ class DataLoaderTest {
 	@Test
 	void testGetUserFirstUserName() {
 		studentList = DataLoader.getStudents();
-		assertEquals("asmith", studentList.get(0).getUserName());
+		assertEquals("asmith", studentList.get(0).getUsername());
 	}
 }
