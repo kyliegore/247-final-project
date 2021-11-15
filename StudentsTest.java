@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.UUID;
 //Tested by Christian Rios
+//Note that these tests come up with an error when testing from the entire directory, but will work when tested individually.
 class StudentsTest {
     public static void setup() {
         //runs before each test
