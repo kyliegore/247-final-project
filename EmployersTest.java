@@ -38,7 +38,7 @@ class EmployersTest {
     @Test
     public void testGetEmployerThatExists() {
         setup();
-        Employer employer = Employers.getEmployer("abcd1234");
+        Employer employer = Employers.getEmployer("abc");
         assertNotNull(employer);
     }
 
@@ -52,7 +52,7 @@ class EmployersTest {
     @Test
     public void testHaveEmployerThatExists() {
         setup();
-        Boolean have = Employers.haveEmployer("abcd1234");
+        Boolean have = Employers.haveEmployer("abc");
         assertTrue(have);
     }
 
