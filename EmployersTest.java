@@ -34,4 +34,32 @@ class EmployersTest {
         ArrayList<Employer> employerList = Employers.getEmployers();
         assertNotNull(employerList);
     }
+
+    @Test
+    public void testGetEmployerThatExists() {
+        setup();
+        Employer employer = Employers.getEmployer("abcd1234");
+        assertNotNull(employer);
+    }
+
+    @Test
+    public void testGetEmployerThatDoesNotExist() {
+        setup();
+        Employer employer = Employers.getEmployer("notinlist");
+        assertNull(employer);
+    }
+
+    @Test
+    public void testHaveEmployerThatExists() {
+        setup();
+        Boolean have = Employers.haveEmployer("abcd1234");
+        assertTrue(have);
+    }
+
+    @Test
+    public void testHaveEmployerThatDoesNotExist() {
+        setup();
+        Boolean have = Employers.haveEmployer("notinlist");
+        assertFalse(have);
+    }
 }
