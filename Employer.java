@@ -7,13 +7,12 @@ public class Employer {
     /**
      * Creating private instance variables for an Employer
      */
-public class Employer   {
-    private String company;
-    private String description;
-    private UUID Id;
-    private String password;
-    private String username;
-    private String email;
+        private String company;
+        private String description;
+        private UUID Id;
+        private String password;
+        private String username;
+        private String email;
     /**
      * paramterized Constructor for an Employer
      */

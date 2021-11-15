@@ -25,7 +25,7 @@ public class Employers {
         }
         return employers;
     }
-    public ArrayList<Employer> getEmployers() {
+    public static ArrayList<Employer> getEmployers() {
         return employerList;
     }
     /**
@@ -37,8 +37,8 @@ public class Employers {
      * @param companyName
      * @param description
      */
-    public void addEmployer(UUID id, String email, String username, String password, String companyName, String description) {
-        employerList.add(new Employer(id,username,password,email,companyName,description));
+    public static void addEmployer(UUID id, String email, String username, String password, String companyName, String description) {
+        employerList.add(new Employer(id,email,username,password,companyName,description));
     }
     /**
      * writing all employer information to the JSON in datawriter

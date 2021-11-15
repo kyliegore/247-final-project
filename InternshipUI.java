@@ -206,7 +206,7 @@ public class InternshipUI {
         if (doFilter.equalsIgnoreCase("Y")) {
             System.out.println("Enter the filter you would like: \n");
             String filterName = scanner.nextLine();
-            if (!internship.searchJobs(filter)) {
+            if (!internship.searchJobs(filterName)) {
                 System.out.println("The filter search did not work.");
             }
         } 
@@ -216,7 +216,7 @@ public class InternshipUI {
             }
         }
         System.out.println("Would you like to apply to any of these jobs? (Y/N)\n");
-        String input = Scanner.nextLine();
+        String input = scanner.nextLine();
         if (input.equalsIgnoreCase("Y")) {
             System.out.println("Which job? Enter a number where it sits on the list you're seeing");
             int choice = scanner.nextInt();

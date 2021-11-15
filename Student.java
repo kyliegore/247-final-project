@@ -22,6 +22,7 @@ public class Student {
     private ArrayList<String> extracurriculars;
     private ArrayList<String> references;
     private ArrayList<String> experience;
+    private ArrayList<Resume> resumes;
     /**
      * Parameterized Constructor
      * @param id
@@ -149,7 +150,7 @@ public class Student {
      * ToString to show the Student their acct information.
      */
     public String toString() {
-        return "First name: " + this.firstName + "\n" + "FLast name: " + this.lastName + "\n"+ "ID: " + this.Id + "\n" + "Email: " + this.email + "\n";
+        return "First name: " + this.firstName + "\n" + "Last name: " + this.lastName + "\n"+ "ID: " + this.Id + "\n" + "Email: " + this.email + "\n";
     }
     public void searchUser() {
 
@@ -175,3 +176,4 @@ public class Student {
     public void apply() {
         System.out.println("Successfully applied to job.");
     }
+}

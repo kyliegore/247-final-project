@@ -21,7 +21,7 @@ public class JobListing {
         }
         return joblistings;
     }
-    public ArrayList<Job> getJob() {
+    public static ArrayList<Job> getJob() {
         return jobList;
     }
     /**
@@ -33,7 +33,7 @@ public class JobListing {
      * @param description
      * @param skills
      */
-    public void addJob(String location, Double pay, Boolean remote, String date, String description, ArrayList<String> skills) {
+    public static void addJob(String location, Double pay, Boolean remote, String date, String description, ArrayList<String> skills) {
         jobList.add(new Job(location, pay, remote, date, description, skills));
     }
     /**
