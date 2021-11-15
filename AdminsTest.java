@@ -8,8 +8,13 @@ import java.util.UUID;
 class AdminsTest {
     public static void setup() {
         //runs before each test
-        //Admins admins = null;
-        //ArrayList<Admin> adminList = new ArrayList<>();
+        UUID id = UUID.fromString("0b5330dc-7e63-410f-9c9f-32f660ee9c4f");
+        String email = "abc@gmail.com";
+        String username = "abc";
+        String password = "123";
+        String firstName = "ABC";
+        String lastName = "DEF";
+        Admins.addAdmin(id, email, username, password, firstName, lastName);
     }
 
     public static void tearDown() {
@@ -28,13 +33,7 @@ class AdminsTest {
 
     @Test
     public void testAddingAdmin() {
-        UUID id = UUID.fromString("0b5330dc-7e63-410f-9c9f-32f660ee9c4f");
-        String email = "abc@gmail.com";
-        String username = "abc";
-        String password = "123";
-        String firstName = "ABC";
-        String lastName = "DEF";
-        Admins.addAdmin(id, email, username, password, firstName, lastName);
+        setup();
         ArrayList<Admin> adminList = Admins.getAdmin();
         assertNotNull(adminList);
     }
