@@ -13,8 +13,8 @@ class DataLoaderTest {
 	@BeforeEach
 	public void setup() {
 		studentList.clear();
-		studentList.add(new User("asmith", "Amy", "Smith", 19, "803-454-3344"));
-		studentList.add(new User("bwhite", "Bob", "White", 23, "803-333-3544"));
+		studentList.add(new Student("asmith", "Amy", "Smith", 19, "803-454-3344"));
+		studentList.add(new Student("bwhite", "Bob", "White", 23, "803-333-3544"));
 		DataWriter.saveStudent();
 	}
 	
@@ -39,8 +39,8 @@ class DataLoaderTest {
 	}
 	
 	@Test
-	void testGetUserFirstUserName() {
+	void testGetStudentFirstUserName() {
 		studentList = DataLoader.getStudents();
-		assertEquals("asmith", studentList.get(0).getUserName());
+		assertEquals("asmith", studentList.get(0).getUsername());
 	}
 }
