@@ -84,6 +84,11 @@ public class Internship {
 
     }
 
+    public boolean apply(int choice) {
+        currentStudent.apply();
+        return true;
+    }
+
     public boolean viewApplicants() {
         if (jobs.getApplicants() == -1) {
             return false;

@@ -4,14 +4,10 @@ import java.util.UUID;
  * @author Anton, Christian, Kylie, Jack
  */
 
-<<<<<<< HEAD
 public class Student {
     /**
      * Creating private instance variables for a Student
      */
-=======
-public class Student   {
->>>>>>> 46b8f53797d8b41a1f97724536f1af98ed983b97
     private double gpa;
     private String grade;
     private UUID Id;
@@ -26,7 +22,6 @@ public class Student   {
     private ArrayList<String> extracurriculars;
     private ArrayList<String> references;
     private ArrayList<String> experience;
-<<<<<<< HEAD
     /**
      * Parameterized Constructor
      * @param id
@@ -44,10 +39,6 @@ public class Student   {
      * @param references
      * @param experience
      */
-=======
-    private ArrayList<Resume> resumes;
-
->>>>>>> 46b8f53797d8b41a1f97724536f1af98ed983b97
     public Student(UUID id, String username, String password, String email, String number, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, ArrayList<String> references, ArrayList<String> experience) {
         this.Id = id;
         this.username = username;
@@ -181,7 +172,6 @@ public class Student   {
         }
         return true;
     }
-    private void apply() {
-
+    public void apply() {
         System.out.println("Successfully applied to job.");
     }
