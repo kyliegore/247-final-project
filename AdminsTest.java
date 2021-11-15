@@ -37,4 +37,5 @@ class AdminsTest {
         ArrayList<Admin> adminList = Admins.getAdmin();
         assertNotNull(adminList);
     }
+    
 }
