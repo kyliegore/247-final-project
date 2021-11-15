@@ -21,7 +21,7 @@ public class Students {
         }
         return students;
     }
-    public ArrayList<Student> getStudent() {
+    public static ArrayList<Student> getStudent() {
         return studentList;
     }
     /**
@@ -41,7 +41,7 @@ public class Students {
      * @param references
      * @param experience
      */
-    public void addStudent(UUID id, String username, String password, String email, String number, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, ArrayList<String> references, ArrayList<String> experience) {
+    public static void addStudent(UUID id, String username, String password, String email, String number, String firstName, String lastName, Double gpa, String grade, ArrayList<String> skills, ArrayList<String> awards, ArrayList<String> extracurriculars, ArrayList<String> references, ArrayList<String> experience) {
         studentList.add(new Student(id,username,password,email,number,firstName,lastName,gpa,grade,skills,awards,extracurriculars,references,experience));
     }
     /**
@@ -55,7 +55,7 @@ public class Students {
      * @param userName
      * @return
      */
-    public Student getStudent(String userName) {
+    public static Student getStudent(String userName) {
         for(Student student : studentList ) {
             if(student.getUsername().equals(userName)) {
                 return student;

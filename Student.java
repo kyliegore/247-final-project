@@ -150,7 +150,7 @@ public class Student {
      * ToString to show the Student their acct information.
      */
     public String toString() {
-        return "First name: " + this.firstName + "\n" + "FLast name: " + this.lastName + "\n"+ "ID: " + this.Id + "\n" + "Email: " + this.email + "\n";
+        return "First name: " + this.firstName + "\n" + "Last name: " + this.lastName + "\n"+ "ID: " + this.Id + "\n" + "Email: " + this.email + "\n";
     }
     public void searchUser() {
 
