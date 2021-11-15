@@ -68,7 +68,7 @@ public class Students {
      * @param userName
      * @return
      */
-    public boolean haveStudent(String userName) {
+    public static boolean haveStudent(String userName) {
          for(Student student: studentList ) {
                 if(student.getUsername().equals(userName)) {
                     return true;

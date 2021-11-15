@@ -52,7 +52,7 @@ class StudentsTest {
         assertNotNull(studentList);
     }
     @Test
-    public void testGetStudentthatExists() {
+    public void testGetStudentThatExists() {
         setup();
         Student student = Students.getStudent("abc");
         assertNotNull(student);
@@ -63,5 +63,19 @@ class StudentsTest {
         setup();
         Student student = Students.getStudent("notinlist");
         assertNull(student);
+    }
+
+    @Test
+    public void testHaveStudentThatExists() {
+        setup();
+        Boolean have = Students.haveStudent("abc");
+        assertTrue(have);
+    }
+
+    @Test
+    public void testHaveStudentThatDoesNotExist() {
+        setup();
+        Boolean have = Students.haveStudent("notinlist");
+        assertFalse(have);
     }
 }
