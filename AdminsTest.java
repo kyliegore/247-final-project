@@ -3,6 +3,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.UUID;
+
+//Tested by Christian Rios
 class AdminsTest {
     public static void setup() {
         //runs before each test
