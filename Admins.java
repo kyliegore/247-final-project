@@ -15,11 +15,11 @@ public class Admins {
         }
         return admins;
     }
-    public ArrayList<Admin> getAdmin() {
+    public static ArrayList<Admin> getAdmin() {
         return adminList;
     }
-    public void addAdmin(UUID id, String email, String username, String password, String firstName, String lastName) {
-        adminList.add(new Admin(id,username,password,email,firstName,lastName));
+    public static void addAdmin(UUID id, String email, String username, String password, String firstName, String lastName) {
+        adminList.add(new Admin(id,email,username,password,firstName,lastName));
     }
     public void logout() {
         DataWriter.saveAdmin();
