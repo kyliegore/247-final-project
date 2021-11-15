@@ -6,7 +6,7 @@ import java.util.UUID;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+//Tested by Anton Aarnink, Kylie Gore
 class DataLoaderTest {
 	private Students students = Students.getInstance();
 	private ArrayList<Student> studentList = students.getStudent();

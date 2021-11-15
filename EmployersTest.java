@@ -5,10 +5,10 @@ import org.junit.jupiter.api.BeforeEach;
 
 import java.util.ArrayList;
 import java.util.UUID;
-//Tested by Christian Rios
+//Tested by Christian Rios, Kylie Gore
 class EmployersTest {
     @BeforeEach
-    public static void setup() {
+    public void setup() {
         //runs before each test
         UUID id = UUID.fromString("91f284ed-c529-47c4-b9a0-e61b768027b7");
         String email = "abc@gmail.com";
@@ -20,7 +20,7 @@ class EmployersTest {
     }
 
     @AfterEach
-    public static void tearDown() {
+    public void tearDown() {
         //runs after each test
     }
 

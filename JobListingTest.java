@@ -8,7 +8,7 @@ import java.util.ArrayList;
 //Tested by Christian Rios
 class JobListingTest {
     @BeforeEach
-    public static void setup() {
+    public void setup() {
         //runs before each test
         String location = "Columbia";
         Double pay = 10.55;
@@ -22,7 +22,7 @@ class JobListingTest {
     }
 
     @AfterEach
-    public static void tearDown() {
+    public void tearDown() {
         //runs after each test
     }
 

@@ -9,7 +9,7 @@ import java.util.UUID;
 //Note that these tests may come up with an error when testing from the entire directory, but will work when tested individually.
 class StudentsTest {
     @BeforeEach
-    public static void setup() {
+    public void setup() {
         //runs before each test
         UUID id = UUID.fromString("934e9322-fe0c-4368-a182-83eb2fa4d8e9");
         String email = "jerry@gmail.com";
@@ -33,7 +33,7 @@ class StudentsTest {
         Students.addStudent(id, username, password, email, number, firstName, lastName, gpa, grade, skills, awards, extracurriculars, references, experience);
     }
     @AfterEach
-    public static void tearDown() {
+    public void tearDown() {
         //runs after each test
     }
 
