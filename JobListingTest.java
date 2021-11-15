@@ -1,10 +1,13 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 
 import java.util.ArrayList;
 
 //Tested by Christian Rios
 class JobListingTest {
+    @BeforeEach
     public static void setup() {
         //runs before each test
         String location = "Columbia";
@@ -18,6 +21,7 @@ class JobListingTest {
         JobListing.addJob(location, pay, remote, date, description, skills);
     }
 
+    @AfterEach
     public static void tearDown() {
         //runs after each test
     }
@@ -32,7 +36,6 @@ class JobListingTest {
 
     @Test
     public void testAddingJobListing() {
-        setup();
         ArrayList<Job> jobList = JobListing.getJob();
         assertNotNull(jobList);
     }

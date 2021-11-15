@@ -1,11 +1,14 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 
 import java.util.ArrayList;
 import java.util.UUID;
 
 //Tested by Christian Rios
 class AdminsTest {
+    @BeforeEach
     public static void setup() {
         //runs before each test
         UUID id = UUID.fromString("0b5330dc-7e63-410f-9c9f-32f660ee9c4f");
@@ -17,6 +20,7 @@ class AdminsTest {
         Admins.addAdmin(id, email, username, password, firstName, lastName);
     }
 
+    @AfterEach
     public static void tearDown() {
         //runs after each test
         //Admins admins = null;
@@ -33,7 +37,6 @@ class AdminsTest {
 
     @Test
     public void testAddingAdmin() {
-        setup();
         ArrayList<Admin> adminList = Admins.getAdmin();
         assertNotNull(adminList);
     }

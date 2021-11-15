@@ -14,7 +14,7 @@ import org.json.simple.JSONObject;
 public class DataWriter extends DataConstants {
     public static void saveStudent() {
         Students students = Students.getInstance();
-        ArrayList<Student> newStudents = tudents.getStudent();
+        ArrayList<Student> newStudents = students.getStudent();
         JSONArray jsonStudent = new JSONArray();
         for(int i=0; i< newStudents.size(); i++) {
 			jsonStudent.add(getStudentJSON(newStudents.get(i)));
